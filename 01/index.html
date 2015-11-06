@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>-MáquinaCondor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Crete+Round|Oswald&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+<style type="text/css">
+
+html, body {
+  background: black;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+#imgBgFull {
+  z-index: -999;
+  min-height: 100%;
+  min-width: 100px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 550px;
+}
+#wrapper {
+  width: 600px;
+  margin-left: 100px;
+  min-height: 400px;
+}
+#wrapper H1 {
+  font-family: 'Oswald', sans-serif;
+  color: Blue;
+  font-size: 28px;
+  letter-spacing: 1.5px;
+}
+#wrapper p {
+  font-family: 'Oswald', sans-serif;
+  color: Blue;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+}
+#poema {
+  margin-top: 130px;
+}
+#poema p {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-size: 26px;
+  letter-spacing: 1px;
+  line-height: 20px;
+  padding: 0px;
+}
+#poema a{
+  color: red;
+}
+</style>
+
+
+
+<script type="text/javascript">  
+//window.onload=function(){  
+
+function cambiar(){  
+   var thediv=document.getElementById("imgBgFull");  
+   var imgarray = new Array("img/img1.jpg", "img/img2.jpg", "img/img3.jpg", "img/img4.jpg");  
+   var spot =Math.floor(Math.random()* imgarray.length);  
+   thediv.style.background="url("+imgarray[palabraA]+")";  
+
+   var txtA = new Array("alasA1", "ánforasA2", "urnasA3", "nichosA4");  
+   var palabraA =Math.floor(Math.random()* txtA.length);  
+   var txtdiv=document.getElementById("txtdiv");  
+
+   txtdiv.innerHTML= txtA[palabraA];  
+}  
+</script>  
+
+
+
+</head>
+
+<body>
+
+  <div id="wrapper">
+    <div id="imgBgFull"> </div> 
+
+    <H1>Máquina Condor | Demian Schopf</H1>
+    <p>Santiago, Chile, 20108-2016</p>
+
+    <div id="poema">
+      <p>(Mariposa), no sólo no (cobarde)</p>
+      <p>mas (temeraria), (fatalmente) (ciega)</p>
+      <p>lo que la (llama) al (Fénix) aún le niega</p> 
+      <p>quiere ( obstinada ) que a sus ( <a id="txtdiv"> variable01 </a> ),</p>
+    </div>
+
+    <button onclick="cambiar()">Cambia texto</button>
+
+  </div>
+
+
+
+
+</body>
+
+
+</html>
