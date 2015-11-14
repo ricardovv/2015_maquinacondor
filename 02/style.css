@@ -1,0 +1,100 @@
+html, body {
+  background-color: lightblue;
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+#wrapper {
+  width: 100%;
+  min-height: 500px;
+  padding: 0px;
+  margin: 0px;
+}
+#wrapper H1 {
+  height: 15px;
+  font-family: 'Oswald', sans-serif;
+  color:  DodgerBlue;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+#wrapper p {
+    height: 20px;
+    font-family: 'Oswald', sans-serif;
+    color:  DodgerBlue;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+  }
+
+#header {
+  width: 100%;
+  min-height: 20px;
+  background-color: MidnightBlue;
+  padding: 5px;
+  margin: 0px;
+}
+
+#poema {
+  padding: 5px;
+  margin: 50px 0px 0px 0px;
+}
+#poema p{
+    /* font-family: 'Open Sans', sans-serif; */
+    color: black;
+    font-size: 12px;
+    letter-spacing: 0px;
+    line-height: 12px;
+    padding: 0px;
+  }
+
+#pie p {
+    /* font-family: 'Open Sans', sans-serif; */
+    color: DodgerBlue;
+    font-size: 10px;
+    letter-spacing: 0px;
+    line-height: 12px;
+    padding: 0px;
+  }
+
+#txtnombrediv, #txtdiv {
+  color:red;
+}
+
+
+
+@media only screen and (min-width: 400px) {
+    body {
+        background: black;
+    }
+  #wrapper {
+    width: 800px;
+    margin-left: 10px;
+    min-height: 500px;
+  }
+  #wrapper H1 {
+    font-family: 'Oswald', sans-serif;
+    color: DodgerBlue;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+  #wrapper p {
+    font-family: 'Oswald', sans-serif;
+    color: Blue;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+  }
+  #poema a{
+    color: orange;
+  }
+  #poema p {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    padding: 0px;
+  }
+
+
+} 
+
