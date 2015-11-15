@@ -8,3 +8,5 @@ Desarollos en JavaScript, y diversas apis financieras.
 
 Proyecto en desarrollo Noviembre - Diciembre 2015, Santiago Chile. 
 
+Por ver.
+
