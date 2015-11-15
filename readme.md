@@ -6,5 +6,5 @@ El actual proyecto extende el anterior com versión web y movil, incporporando l
 
 Desarollos en JavaScript, y diversas apis financieras.
 
-Proyecto en desarrollo Noveiembre - Diciembre 2015, Santiago Chile. 
+Proyecto en desarrollo Noviembre - Diciembre 2015, Santiago Chile. 
 
