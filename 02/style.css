@@ -38,14 +38,20 @@ html, body {
   padding: 5px;
   margin: 50px 0px 0px 0px;
 }
-#poema p{
+#poema a{
+  color: red;
+}
+
+#poema p {
     /* font-family: 'Open Sans', sans-serif; */
     color: black;
     font-size: 12px;
     letter-spacing: 0px;
     line-height: 12px;
     padding: 0px;
+    text-align:center;
   }
+
 
 #pie p {
     /* font-family: 'Open Sans', sans-serif; */
@@ -56,7 +62,7 @@ html, body {
     padding: 0px;
   }
 
-#txtnombrediv, #txtdiv {
+#nombreAdiv, #palabra1Div, #palabra2Div {
   color:red;
 }
 

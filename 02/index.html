@@ -11,25 +11,42 @@
 
 <script type="text/javascript">  
 //window.onload=function(){  
-var txtA = new Array("alasA1", "ánforasA2", "urnasA3", "nichosA4");  
+var nombreALista = new Array("Arafat", "Jamal", "Ayman", "Abdullah", "Mohammad", "Anas", "Samira", "Abdul-Fattah", "Rahaf", "Mohammad");  
+var palabra1Lista = new Array("Palabra1_1", "Palabra1_2", "Palabra1_3", "Palabra1_4", "Palabra1_5", "Palabra1_6", "Palabra1_7", "Palabra1_8", "Palabra1_9", "Palabra1_10");  
+var palabra2Lista = new Array("Palabra2_1", "Palabra2_2", "Palabra2_3", "Palabra2_4", "Palabra2_5", "Palabra2_6", "Palabra2_7", "Palabra2_8", "Palabra2_9", "Palabra2_10");  
 
-function cambiar(){  
-
-   var txtA = new Array("alasA1", "ánforasA2", "urnasA3", "nichosA4");  
-   var nonbreA = new Array("ÄlvarezA", "BrionesA", "ContrerasA", "DíazA");  
-
-   var palabraA =Math.floor(Math.random()* txtA.length);  
-   var nombreA =Math.floor(Math.random()* nonbreA.length);  
-
-   var txtdiv=document.getElementById("txtdiv");  
-   var txtnombrediv=document.getElementById("txtnombrediv");  
-
-   txtdiv.innerHTML= txtA[palabraA];  
-   txtnombrediv.innerHTML= nonbreA[nombreA];  
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+//CAMBIA TODO
+function cambiaTodo(){  
+  cambiaNombreA();
+  cambiaPalabra1();
+  cambiaPalabra2();
 }  
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+//NOMBRES
+function cambiaNombreA() {
+  var nombreASelector = Math.floor(Math.random() * nombreALista.length);  
+  var nombreADiv      = document.getElementById("nombreADiv");  
+  nombreADiv.innerHTML= nombreALista[nombreASelector ];  
+}
+
+//PALABRA A
+function cambiaPalabra1() {
+  var palabra1Selector =Math.floor(Math.random()* palabra1Lista.length);  
+  var palabra1Div=document.getElementById("palabra1Div");  
+  palabra1Div.innerHTML= palabra1Lista[palabra1Selector];  
+}
+ 
+//PALABRA B
+function cambiaPalabra2() {
+  var palabra2Selector =Math.floor(Math.random()* palabra2Lista.length);  
+  var palabra2Div=document.getElementById("palabra2Div");  
+  palabra2Div.innerHTML= palabra2Lista[palabra2Selector];  
+}
 
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 </script>  
 
 
@@ -44,17 +61,17 @@ function cambiar(){
     </div>
 
     <div id="poema">
-      <p>(Mariposa), no sólo no (cobarde)</p>
-      <p>mas (<a id="txtnombrediv">variableNombre01</a>) (temeraria), (fatalmente) (ciega)</p>
+      <p>(<a id="palabra1Div">Mariposa</a>), no sólo no (<a id="palabra2Div">cobarde</a>)</p>
+      <p>mas (<a id="nombreADiv">Nombre01</a>) (temeraria), (fatalmente) (ciega)</p>
       <p>lo que la (llama) al (Fénix) aún le niega</p> 
-      <p>quiere (obstinada) que a sus (<a id="txtdiv">variable01</a>),</p>
+      <p>quiere (obstinada) que a sus (palabra10),</p>
     </div>
 
-    <button onclick="cambiar()">Cambia texto</button>
     
     <br><br><br><br><br>   
     
     <div id="pie">
+    <button onclick="cambiaTodo()">Cambia texto</button>
       <hr>
     <p>Otro elemento</p>
       <hr>
