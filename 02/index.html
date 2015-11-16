@@ -14,14 +14,21 @@
 var nombreALista = new Array("Arafat", "Jamal", "Ayman", "Abdullah", "Mohammad", "Anas", "Samira", "Abdul-Fattah", "Rahaf", "Mohammad");  
 var palabra1Lista = new Array("Palabra1_1", "Palabra1_2", "Palabra1_3", "Palabra1_4", "Palabra1_5", "Palabra1_6", "Palabra1_7", "Palabra1_8", "Palabra1_9", "Palabra1_10");  
 var palabra2Lista = new Array("Palabra2_1", "Palabra2_2", "Palabra2_3", "Palabra2_4", "Palabra2_5", "Palabra2_6", "Palabra2_7", "Palabra2_8", "Palabra2_9", "Palabra2_10");  
-
+var palabra3Lista = new Array("Palabra3_1", "Palabra3_2", "Palabra3_3", "Palabra3_4", "Palabra3_5", "Palabra3_6", "Palabra3_7", "Palabra3_8", "Palabra3_9", "Palabra3_10");  
+var palabra4Lista = new Array("Palabra4_1", "Palabra4_2", "Palabra4_3", "Palabra4_4", "Palabra4_5", "Palabra4_6", "Palabra4_7", "Palabra4_8", "Palabra4_9", "Palabra4_10");  
+var palabra5Lista = new Array("Palabra5_1", "Palabra5_2", "Palabra5_3", "Palabra5_4", "Palabra5_5", "Palabra5_6", "Palabra5_7", "Palabra5_8", "Palabra5_9", "Palabra5_10");  
+ 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 //CAMBIA TODO
 function cambiaTodo(){  
-  cambiaNombreA();
-  cambiaPalabra1();
+  cambiaNombreA();  
+  cambiaPalabra1(); 
   cambiaPalabra2();
+  cambiaPalabra3();
+  cambiaPalabra4();
+  cambiaPalabra5();
 }  
+
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 //NOMBRES
@@ -31,20 +38,44 @@ function cambiaNombreA() {
   nombreADiv.innerHTML= nombreALista[nombreASelector ];  
 }
 
-//PALABRA A
+//PALABRA 1
 function cambiaPalabra1() {
   var palabra1Selector =Math.floor(Math.random()* palabra1Lista.length);  
   var palabra1Div=document.getElementById("palabra1Div");  
   palabra1Div.innerHTML= palabra1Lista[palabra1Selector];  
 }
  
-//PALABRA B
+//PALABRA 2
 function cambiaPalabra2() {
   var palabra2Selector =Math.floor(Math.random()* palabra2Lista.length);  
   var palabra2Div=document.getElementById("palabra2Div");  
   palabra2Div.innerHTML= palabra2Lista[palabra2Selector];  
 }
 
+//PALABRA 3
+function cambiaPalabra3() {
+  var palabra3Selector =Math.floor(Math.random()* palabra3Lista.length);  
+  var palabra3Div=document.getElementById("palabra3Div");  
+  palabra3Div.innerHTML= palabra3Lista[palabra3Selector];  
+}
+
+//PALABRA 4
+function cambiaPalabra4() {
+  var palabra4Selector =Math.floor(Math.random()* palabra4Lista.length);  
+  var palabra4Div=document.getElementById("palabra4Div");  
+  palabra4Div.innerHTML= palabra4Lista[palabra4Selector];  
+}
+
+//PALABRA 5
+function cambiaPalabra5() {
+  var palabra5Selector =Math.floor(Math.random() * palabra5Lista.length);  
+  var palabra5Div=document.getElementById("palabra5Div");  
+  palabra5Div.innerHTML= palabra5Lista[palabra5Selector];  
+}
+
+
+var myVar1 = setInterval(cambiaTodo, 1000);
+ 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 </script>  
@@ -62,7 +93,10 @@ function cambiaPalabra2() {
 
     <div id="poema">
       <p>(<a id="palabra1Div">Mariposa</a>), no sólo no (<a id="palabra2Div">cobarde</a>)</p>
-      <p>mas (<a id="nombreADiv">Nombre01</a>) (temeraria), (fatalmente) (ciega)</p>
+      <p>mas (<a id="nombreADiv">Nombre01</a>) 
+        (<a id="palabra3Div">temeraria</a>), 
+        (<a id="palabra4Div">fatalmente</a>) 
+        (<a id="palabra5Div">ciega</a>)</p>
       <p>lo que la (llama) al (Fénix) aún le niega</p> 
       <p>quiere (obstinada) que a sus (palabra10),</p>
     </div>
@@ -71,7 +105,7 @@ function cambiaPalabra2() {
     <br><br><br><br><br>   
     
     <div id="pie">
-    <button onclick="cambiaTodo()">Cambia texto</button>
+    <!-- <button onclick="cambiaTodo()">Cambia texto</button> -->
       <hr>
     <p>Otro elemento</p>
       <hr>
