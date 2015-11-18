@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>-MáquinaCondor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript">  
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+// Evalua y Devuelve valores monedas. POr ahora random, luego evalua datos segun rangos 
+function money1(val1, val2) {
+	  var money1Val = Math.random() * (val2 - val1) + val1 ;  	
+ 		return money1Val; 
+ }
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+// VALORES MONEDAS
+var money1Low = 5.0;
+var money1High = 6.0;
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+// MUESTRA VALORES MONEDAS
+var intervalo = setInterval(myTimer, 1000);
+var valorVar1;
+
+function myTimer() {
+    var hora = new Date();
+ 	valorVar1 = money1(money1Low, money1High);
+    
+    document.getElementById("muestrahora").innerHTML = hora.toLocaleTimeString();
+    document.getElementById("valor1").innerHTML = "este es el valor= " + valorVar1;
+
+}
+
+</script>  
+
+
+</head>
+<body>
+    <p>TIEMPO</p>
+    <div id="muestrahora"></div>
+
+    <p>VALOR1</p>
+    <div id="valor1"></div>
+
+
+
+</body>
+</html>

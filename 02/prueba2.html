@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        function getRandomInt(lower, upper)
+        {
+            //to create an even sample distribution
+            return Math.floor(lower + (Math.random() * (upper - lower + 1)));
+
+            //to produce an uneven sample distribution
+            //return Math.round(lower + (Math.random() * (upper - lower)));
+
+            //to exclude the max value from the possible values
+            //return Math.floor(lower + (Math.random() * (upper - lower)));
+        }
+
+        var min = -5;
+        var max = 5;
+
+        var array = new Array();
+
+        for(var i = 0; i <= (max - min) + 2; i++) {
+          array.push(0);
+        }
+
+        for(var i = 0; i < 100; i++) {
+            var random = getRandomInt(min, max);
+            array[random - min + 1]++;
+        }
+
+        var maxSample = 0;
+        for(var i = 0; i < max - min; i++) {
+            maxSample = Math.max(maxSample, array[i]);
+        }
+
+        //create a bar graph to show the sample distribution
+        var maxHeight = 500;
+        for(var i = 0; i <= (max - min) + 2; i++) {
+            var sampleHeight = (array[i]/maxSample) * maxHeight/2;
+
+            document.write('<span style="display:inline-block;color:'+(sampleHeight == 0 ? 'black' : 'white')+';background-color:black;height:'+sampleHeight+'px">&nbsp;[' + (i + min - 1) + ']:&nbsp;'+array[i]+'</span>&nbsp;&nbsp;');
+        }
+        document.write('<hr/>');
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
