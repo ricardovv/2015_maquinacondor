@@ -70,7 +70,7 @@ html, body {
 
 @media only screen and (min-width: 400px) {
     body {
-        background: grey;
+        background: dimgrey;
     }
   #wrap {
     width: 100%;
@@ -93,9 +93,10 @@ html, body {
     color: orange;
   }
   #poema p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'IM Fell DW Pica SC', serif;
+  /*font-family: 'Open Sans', sans-serif; */
     color: white;
-    font-size: 20px;
+    font-size: 30px;
     letter-spacing: 1px;
     line-height: 20px;
     padding: 0px;
