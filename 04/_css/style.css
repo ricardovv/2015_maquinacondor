@@ -1,9 +1,9 @@
 html, body {
-  background-color: lightblue;
+  background-color: grey;
   height: 100%;
   width: 100%;
   padding: 0px;
-  margin: 0px;
+  margin: 10px;
 }
 #wrap {
   width: 100%;
@@ -52,7 +52,6 @@ html, body {
     text-align:center;
   }
 
-
 #pie p {
     /* font-family: 'Open Sans', sans-serif; */
     color: DodgerBlue;
@@ -67,7 +66,6 @@ html, body {
 }
 
 
-
 @media only screen and (min-width: 400px) {
     body {
         background: dimgrey;
@@ -75,7 +73,6 @@ html, body {
   #wrap {
     width: 100%;
     margin-left: 0px;
-    height: 50%;
   }
   #wrap H1 {
     font-family: 'Oswald', sans-serif;
@@ -86,7 +83,7 @@ html, body {
   #wrap p {
     font-family: 'Oswald', sans-serif;
     color: Blue;
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 1.4px;
   }
   #poema a{
@@ -96,7 +93,7 @@ html, body {
     font-family: 'IM Fell DW Pica SC', serif;
   /*font-family: 'Open Sans', sans-serif; */
     color: white;
-    font-size: 30px;
+    font-size: 24px;
     letter-spacing: 1px;
     line-height: 20px;
     padding: 0px;

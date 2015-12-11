@@ -1,0 +1,179 @@
+html, body {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+#wrap {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  display: table; /* para centrar cela interior del texto */
+  margin-left: 200px;
+}
+#wrap p {
+    height: 20px;
+    font-family: 'Oswald', sans-serif;
+    color:  DodgerBlue;
+    font-size: 14px;
+    letter-spacing: 1.2px;
+  }
+
+#header {
+  width: 100%;
+  height: 40px;
+  background-color: ;
+  padding: 0px;
+  margin: 0px;
+}
+#header h1 {
+  width: auto;
+  height: auto;
+  background-color: black;
+  padding: 2px 5px 2px 5px;
+  margin: 0px;
+    position: fixed;
+    top: 5px;
+    right: 5;
+    font-family: 'Oswald', sans-serif;
+    color: yellow;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+ }
+
+#header h2 {
+  width: auto;
+  height: auto;
+  background-color: black;
+  padding: 2px 5px 2px 5px;
+  margin: 0px;
+    position: fixed;
+    top: 28px;
+    right: 5px;
+  font-family: 'Oswald', sans-serif;
+  color: yellow;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-align: right;
+ }
+
+#poema {
+  width: 98%;  
+  height: 100%;
+  padding: 0px 20px;
+       background-color: white;
+    display: table-cell;
+    vertical-align: middle;
+    border-left: 1px solid grey; 
+  }
+
+#poema a{
+  color: red;
+}
+#poema a:hover {
+  color: DodgerBlue; 
+}
+
+#poema p {
+    /* font-family: 'Open Sans', sans-serif; */
+    color: black;
+    font-size: 24px;
+    letter-spacing: 0px;
+    text-align:left;
+    padding: 5px 0px 5px 0px;
+    margin-left: 0px ;
+  }
+
+
+#pie {
+    /* font-family: 'Open Sans', sans-serif; */
+    background-color: black;
+    color: yellow;
+    width: 212px;
+    height: 100% ;
+    font-size: 10px;
+    letter-spacing: 0px;
+    line-height: 12px;
+    padding: 0px;
+    position: fixed;
+     left: 0px;
+    text-align: right;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+#pie p {
+    /* font-family: 'Open Sans', sans-serif; */
+    color: DodgerBlue;
+    font-size: 9px;
+    letter-spacing: 0px;
+    line-height: 22px;
+    padding: 0px;
+  }
+
+#nombreAdiv, #palabra1Div, #palabra2Div {
+  color:red;
+}
+
+
+ /* detalle tooltip viejo - - - - - - - - - - - - - - - - - - -
+
+/* detalle tooltip - - - - - - - - - - - - - - - - - - - */
+/* Easy CSS Tooltip - by Koller Juergen [www.kollermedia.at] */
+/* {font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; }*/
+a {background:yellow; padding:4px 4px; text-decoration:none;} /*BG color is a must for IE6*/
+a:hover {background:black; padding:4px 4px; text-decoration:none;} /*BG color is a must for IE6*/
+a.tooltip span {
+  display:none; 
+  margin-top:-100px; 
+padding:2px 2px; 
+  width:140px; height:90px; 
+  font-size: 12px; 
+  font-family:'Oswald',sans-serif; 
+}
+a.tooltip:hover span{
+  display:inline;
+  padding:2px 2px;  
+  color: grey;
+  position:absolute; 
+  background-image: url("../_img/flecha.png");
+}
+
+/* detalle tooltip - - - - - - - - - - - - - - - - - - - 
+
+
+
+
+@media only screen and (min-width: 400px) {
+    body {
+        background: white;
+    }
+  #wrap {
+    width: 100%;
+    margin-left: 0px;
+  }
+  #wrap p {
+    font-family: 'Oswald', sans-serif;
+    color: grey;
+    font-size: 12px;
+    letter-spacing: 1.4px;
+  }
+  #poema a{
+    color: orange;
+  }
+  #poema p {
+    font-family: 'IM Fell DW Pica SC', serif;
+  font-family: 'Open Sans', sans-serif;  
+    color: white;
+    font-size: 24px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    padding: 0px;
+  }
+} 
+
+*/

@@ -15,9 +15,14 @@ var palabra5categoria5 = new Array( "c5_1_necrologías", "c5_2_tanatologías", "
 var palabra6categoria6 = new Array( "c6_1_necrologías", "c6_2_tanatologías", "c6_3_logópedas", "c6_4_tanatólogos", "c6_5_cremadores", "c6_6_incineradores", "c6_7_fosales", "c6_8_sacramentales", "c6_9_naturalezas muertas", "c6_10_sobre naturalezas", "c6_11_extirpaciones",  "c6_12_ablaciones", "c6_13_alas", "c6_14_ánforas", "c6_15_urnas", "c6_16_nichos", "c6_17_fosales", "c6_18_sacramentales", "c6_19_ánforas", "c6_20_osarios", "c6_21_naturalezas muertas", "c6_22_sobre naturalezas", "c6_23_logóopedas", "c6_24_tanatólogos", "c6_25_naturalezas muertas", "c6_26_sobre naturalezas" , "c6_27_logópedas", "c6_28_tanatólogos", "c6_29_naturalezas muertas", "c6_30_sobre naturalezas", "c6_31_logópedas", "c6_32_tanatólogos", "c6_33_naturalezas muertas", "c6_34_sobre naturalezas", "c6_35_logópedas", "c6_36_tanatólogos");
 var palabra7categoria7 = new Array( "c7_1_necrologías", "c7_2_tanatologías", "c7_3_logópedas", "c7_4_tanatólogos", "c7_5_cremadores", "c7_6_incineradores", "c7_7_fosales", "c7_8_sacramentales", "c7_9_naturalezas muertas", "c7_10_sobre naturalezas", "c7_11_extirpaciones",  "c7_12_ablaciones", "c7_13_alas", "c7_14_ánforas", "c7_15_urnas", "c7_16_nichos", "c7_17_fosales", "c7_18_sacramentales", "c7_19_ánforas", "c7_20_osarios", "c7_21_naturalezas muertas", "c7_22_sobre naturalezas", "c7_23_logóopedas", "c7_24_tanatólogos", "c7_25_naturalezas muertas", "c7_26_sobre naturalezas" , "c7_27_logópedas", "c7_28_tanatólogos", "c7_29_naturalezas muertas", "c7_30_sobre naturalezas", "c7_31_logópedas", "c7_32_tanatólogos", "c7_33_naturalezas muertas", "c7_34_sobre naturalezas", "c7_35_logópedas", "c7_36_tanatólogos");
 var palabra8categoria8 = new Array( "c8_1_necrologías", "c8_2_tanatologías", "c8_3_logópedas", "c8_4_tanatólogos", "c8_5_cremadores", "c8_6_incineradores", "c8_7_fosales", "c8_8_sacramentales", "c8_9_naturalezas muertas", "c8_10_sobre naturalezas", "c8_11_extirpaciones",  "c8_12_ablaciones", "c8_13_alas", "c8_14_ánforas", "c8_15_urnas", "c8_16_nichos", "c8_17_fosales", "c8_18_sacramentales", "c8_19_ánforas", "c8_20_osarios", "c8_21_naturalezas muertas", "c8_22_sobre naturalezas", "c8_23_logóopedas", "c8_24_tanatólogos", "c8_25_naturalezas muertas", "c8_26_sobre naturalezas" , "c8_27_logópedas", "c8_28_tanatólogos", "c8_29_naturalezas muertas", "c8_30_sobre naturalezas", "c8_31_logópedas", "c8_32_tanatólogos", "c8_33_naturalezas muertas", "c8_34_sobre naturalezas", "c8_35_logópedas", "c8_36_tanatólogos");
- 
 var palabra9categoria9 = new Array( "c9_1_necrologías", "c9_2_tanatologías", "c9_3_logópedas", "c9_4_tanatólogos", "c9_5_cremadores", "c9_6_incineradores", "c9_7_fosales", "c9_8_sacramentales", "c9_9_naturalezas muertas", "c9_10_sobre naturalezas", "c9_11_extirpaciones",  "c9_12_ablaciones", "c9_13_alas", "c9_14_ánforas", "c9_15_urnas", "c9_16_nichos", "c9_17_fosales", "c9_18_sacramentales", "c9_19_ánforas", "c9_20_osarios", "c9_21_naturalezas muertas", "c9_22_sobre naturalezas", "c9_23_logóopedas", "c9_24_tanatólogos", "c9_25_naturalezas muertas", "c9_26_sobre naturalezas" , "c9_27_logópedas", "c9_28_tanatólogos", "c9_29_naturalezas muertas", "c9_30_sobre naturalezas", "c9_31_logópedas", "c9_32_tanatólogos", "c9_33_naturalezas muertas", "c9_34_sobre naturalezas", "c9_35_logópedas", "c9_36_tanatólogos");
 
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+//LISTA DE LINKS
+var linkNombreLista = ["popuptexto.html"]
+var linkPalabra1Lista = ["popuptexto.html"]
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 //PRELOAD JSON P5
@@ -37,21 +42,54 @@ var cartegory1;
 function cambiaNombreA() {
   var nombreASelector = Math.floor(Math.random() * nombreALista.length);  
   var nombreADiv      = document.getElementById("nombreADiv");  
-  nombreADiv.innerHTML= nombreALista[nombreASelector];  
+  //set atributos del link de la palabra o nombre
+  nombreADiv.setAttribute('href', linkNombreLista[0]);
+  nombreADiv.setAttribute('target', "_blank"); 
+  nombreADiv.setAttribute('class', "tooltip"); 
+
+  //Tooltip Inner Elements
+  var innerTooltipData = "<span>" + "valor XX" + "</span>";
+  var innerNombre      =  nombreALista[nombreASelector];
+  nombreADiv.innerHTML = innerTooltipData + innerNombre;  
+
+  //coloca onmouseover mouseout, no los uso por ahora
+  //nombreADiv.setAttribute('onmouseover', "bigImg(this)"); 
+  //nombreADiv.setAttribute('onmouseout', "normalImg(this)"); 
+  //onmouseout="normalImg(this)"
 }
+
 
 //PALABRA 1
 function cambiaPalabra1() {
-  var palabra1Selector =Math.floor(Math.random()* palabra1categoria1.length);  
-  var palabra1Div=document.getElementById("palabra1Div");  
-  palabra1Div.innerHTML= palabra1categoria1[palabra1Selector];  
+  var palabra1Selector  = Math.floor(Math.random()* palabra1categoria1.length);  
+  var palabra1Div       = document.getElementById("palabra1Div");  
+  palabra1Div.innerHTML = palabra1categoria1[palabra1Selector];  
+  //setea atributyo del link de la palabra
+  palabra1Div.setAttribute('href', linkPalabra1Lista[0]);
+  palabra1Div.setAttribute('target', "_blank"); 
+  palabra1Div.setAttribute('class', "tooltip"); 
+
+  //Tooltip Inner Elements
+  var innerTooltipData = "<span>" + "valor XX" + "</span>";
+  var innerPalabra1      =  palabra1categoria1[palabra1Selector];
+  palabra1Div.innerHTML = innerTooltipData + innerPalabra1;  
 }
+
  
 //PALABRA 2
 function cambiaPalabra2() {
   var palabra2Selector =Math.floor(Math.random()* palabra2categoria2.length);  
   var palabra2Div=document.getElementById("palabra2Div");  
   palabra2Div.innerHTML= palabra2categoria2[palabra2Selector];  
+  //setea atributyo del link de la palabra
+  palabra2Div.setAttribute('href', linkPalabra1Lista[0]);
+  palabra2Div.setAttribute('target', "_blank"); 
+  palabra2Div.setAttribute('class', "tooltip"); 
+
+  //Tooltip Inner Elements
+  var innerTooltipData = "<span>" + "valor XX" + "</span>";
+  var innerPalabra2      =  palabra2categoria2[palabra2Selector];
+  palabra2Div.innerHTML = innerTooltipData + innerPalabra2;  
 }
 
 //PALABRA 3
@@ -59,6 +97,15 @@ function cambiaPalabra3() {
   var palabra3Selector =Math.floor(Math.random()* palabra3categoria3.length);  
   var palabra3Div=document.getElementById("palabra3Div");  
   palabra3Div.innerHTML= palabra3categoria3[palabra3Selector];  
+  //setea atributyo del link de la palabra
+  palabra3Div.setAttribute('href', linkPalabra1Lista[0]);
+  palabra3Div.setAttribute('target', "_blank"); 
+  palabra3Div.setAttribute('class', "tooltip"); 
+
+  //Tooltip Inner Elements
+  var innerTooltipData = "<span>" + "valor XX" + "</span>";
+  var innerPalabra3      =  palabra3categoria3[palabra3Selector];
+  palabra3Div.innerHTML = innerTooltipData + innerPalabra3;  
 }
 
 //PALABRA 4
@@ -66,6 +113,15 @@ function cambiaPalabra4() {
   var palabra4Selector =Math.floor(Math.random()* palabra4categoria4.length);  
   var palabra4Div=document.getElementById("palabra4Div");  
   palabra4Div.innerHTML= palabra4categoria4[palabra4Selector];  
+  //setea atributyo del link de la palabra
+  palabra4Div.setAttribute('href', linkPalabra1Lista[0]);
+  palabra4Div.setAttribute('target', "_blank"); 
+  palabra4Div.setAttribute('class', "tooltip"); 
+
+    //Tooltip Inner Elements
+  var innerTooltipData = "<span>" + "valor cccXX" + "</span>";
+  var innerPalabra4    =  palabra4categoria4[palabra4Selector];
+  palabra4Div.innerHTML = innerTooltipData + innerPalabra4;  
 }
 
 //PALABRA 5
@@ -73,6 +129,15 @@ function cambiaPalabra5() {
   var palabra5Selector =Math.floor(Math.random() * palabra5categoria5.length);  
   var palabra5Div=document.getElementById("palabra5Div");  
   palabra5Div.innerHTML= palabra5categoria5[palabra5Selector];  
+  //setea atributyo del link de la palabra
+  palabra5Div.setAttribute('href', linkPalabra1Lista[0]);
+  palabra5Div.setAttribute('target', "_blank"); 
+  palabra5Div.setAttribute('class', "tooltip"); 
+
+  //Tooltip Inner Elements
+  var innerTooltipData = "<span>" + "valor XX" + "</span>";
+  var innerPalabra5    =  palabra5categoria5[palabra5Selector];
+  palabra5Div.innerHTML = innerTooltipData + innerPalabra5;  
 }
 
 //PALABRA 6
@@ -80,6 +145,16 @@ function cambiaPalabra6() {
   var palabra6Selector =Math.floor(Math.random() * palabra6categoria6.length);  
   var palabra6Div=document.getElementById("palabra6Div");  
   palabra6Div.innerHTML= palabra6categoria6[palabra6Selector];  
+  //setea atributyo del link de la palabra
+  palabra6Div.setAttribute('href', linkPalabra1Lista[0]);
+  palabra6Div.setAttribute('target', "_blank"); 
+  palabra6Div.setAttribute('class', "tooltip"); 
+
+  //Tooltip Inner Elements
+  var innerTooltipData = "<span>" + "valor XX" + "</span>";
+  var innerPalabra6    =  palabra6categoria6[palabra6Selector];
+  palabra6Div.innerHTML = innerTooltipData + innerPalabra6;  
+
 }
 
 //PALABRA 7
@@ -87,6 +162,16 @@ function cambiaPalabra7() {
   var palabra7Selector =Math.floor(Math.random() * palabra7categoria7.length);  
   var palabra7Div=document.getElementById("palabra7Div");  
   palabra7Div.innerHTML= palabra7categoria7[palabra7Selector];  
+  //setea atributyo del link de la palabra
+  palabra7Div.setAttribute('href', linkPalabra1Lista[0]);
+  palabra7Div.setAttribute('target', "_blank"); 
+  palabra7Div.setAttribute('class', "tooltip"); 
+
+  //Tooltip Inner Elements
+  var innerTooltipData = "<span>" + "valor XX" + "</span>";
+  var innerPalabra7    =  palabra7categoria7[palabra7Selector];
+  palabra7Div.innerHTML = innerTooltipData + innerPalabra7;  
+
 }
 
 //PALABRA 8
@@ -94,16 +179,35 @@ function cambiaPalabra8() {
   var palabra8Selector =Math.floor(Math.random() * palabra8categoria8.length);  
   var palabra8Div=document.getElementById("palabra8Div");  
   palabra8Div.innerHTML= palabra8categoria8[palabra8Selector];  
+  //setea atributyo del link de la palabra
+  palabra8Div.setAttribute('href', linkPalabra1Lista[0]);
+  palabra8Div.setAttribute('target', "_blank"); 
+  palabra8Div.setAttribute('class', "tooltip"); 
+
+  //Tooltip Inner Elements
+  var innerTooltipData = "<span>" + "valor XX" + "</span>";
+  var innerPalabra8    =  palabra8categoria8[palabra8Selector];
+  palabra8Div.innerHTML = innerTooltipData + innerPalabra8;  
+
 }
 
 //PALABRA 9
 function cambiaPalabra9() {
   var palabra9Selector =Math.floor(Math.random() * palabra9categoria9.length);  
   var palabra9Div=document.getElementById("palabra9Div");  
-    //cartegory1 = cartegory1Json.c1b;
-    //palabra9Div.innerHTML= cartegory1;  
-    palabra9Div.innerHTML = palabra9categoria9[palabra9Selector];  
-  
+  //cartegory1 = cartegory1Json.c1b;
+  //palabra9Div.innerHTML= cartegory1;  
+  palabra9Div.innerHTML = palabra9categoria9[palabra9Selector];  
+  //setea atributyo del link de la palabra
+  palabra9Div.setAttribute('href', linkPalabra1Lista[0]);
+  palabra9Div.setAttribute('target', "_blank"); 
+  palabra9Div.setAttribute('class', "tooltip"); 
+
+  //Tooltip Inner Elements
+  var innerTooltipData = "<span>" + "valor XX" + "</span>";
+  var innerPalabra9    =  palabra9categoria9[palabra9Selector];
+  palabra9Div.innerHTML = innerTooltipData + innerPalabra9;  
+
 }
 
 
@@ -139,8 +243,40 @@ function entregaComparacion() {
 
 //Muestra valores
 function muestraMoneda() {
-  document.getElementById("valorSeleccion").innerHTML = "este es el valorx= " + valorVar1 + " | seleccionado: " + seleccionado + " que " + valorDeCorte1;  
+  document.getElementById("valorSeleccion").innerHTML = "VALOR: " + valorVar1 + " | seleccionado: " + seleccionado + " que " + valorDeCorte1;  
 }
+
+
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+//MUESTRA Tooltip, ver guia (http://jsfiddle.net/xaAN3/) no los uso por ahora
+function bigImg(x) {
+    x.style.color = "yellow";
+   // document.getElementById("nombreADiv").innerHTML = "bla bla bla";  
+    //var newDiv = document.createElement("span");
+    // var t = document.createTextNode("Nuevo bloque");
+    // newDiv.appendChild(t);
+    //document.getElementById("palabra1Div").appendChild(newDiv);
+
+    //document.getElementById("nombreADiv").innerHTML = '<span class="title">' + 'dentrospan' + '</span>';
+
+    // var para = document.createElement("span");
+    // var t = document.createTextNode("This is a paragraph.");
+    // para.appendChild(t);
+    // document.getElementById("title").appendChild(para);
+
+//    document.getElementById("title").innerHTML = '<span class="title">' + 'dentrospan' + '</span>';
+
+}
+//no los uso por ahora
+function normalImg(x) { 
+    x.style.color = "green";
+ //  document.getElementById("tooltip").innerHTML = "";
+
+//    var newDiv.removeChild(newDiv.childNodes);
+}
+
 
 
 
@@ -161,8 +297,7 @@ function cambiaTodo(){
   cambiaPalabra9();
 
   entregaComparacion();
-  muestraMoneda();
-
+  muestraMoneda(); 
 }  
 
  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -178,7 +313,7 @@ function draw() {
 }
 
 //UPDATER / ABAJO PARA Q CAMBIE CUANDO CARGA TODO LOD EMAS
-var myVar1 = setInterval(cambiaTodo, 1000);
+var tiempoRecarga = setInterval(cambiaTodo, 2000); //ex myVar1
    
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
