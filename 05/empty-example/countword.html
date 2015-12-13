@@ -1,0 +1,136 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Word counter</title>
+<style type="text/css">
+div.textareas textarea {
+	vertical-align: middle;
+}
+</style>
+
+
+<script type="text/javascript">
+
+var txt1 =  'But Mrs. arbol arbol arbol bebe cacuca xilofon Clinton also strove to recognize something stirring in the electorate that Mr. Donald "When was the last time you saw a Chevrolet in Tokyo?" Trump had clearly tapped into. “It’s O.K., it’s O.K. to be afraid,” she said. “When bad things happen, it does cause anxiety and fear,” she added. “But then you pull yourself together and, especially, if you want to be a leader of our country, and you say: ‘O.K., what are we going to do about it? How are we going to be prepared?’” ';
+
+var txt2 =  'But Mrs. arbol bebe bebe bebe bebe cacuca xilofon Joseph Stiglitz, el afamado Premio Nobel de Economía del año 2001, puso el dedo en la llaga respecto al sistema de pensiones de nuestro país y abrió la puerta para validar un posible cambio de fondo al modelo chileno en este tema, al señalar que se debería transitar a un sistema público. Invitado al cierre de un seminario organizado por la comisión que estudia cambios al sistema de AFP y que preside David Bravo, el economista hizo –vía videoconferencia– un duro diagnóstico del funcionamiento del sistema financiero mundial, el cual, aseguró, no funcionó ni antes ni después de la crisis subprime de 2008.';
+
+var txt3 =  'arbol bebe cacuca cacuca cacuca cacuca xilofon Tras deliberar ante el pleno del TC, el abogado señaló que la gratuidad era una política “legítima” por parte del gobierno, pero que esta debía ser aplicada por un mecanismo correcto. “Lo que nosotros decimos es que no puede usarse una ley de presupuesto que se tramita a la carrera, en forma precipitada, y que solo tiene por objeto crear los ingresos y gastos y estimarlos para hacer toda una reforma sustantiva a la educación superior y su financiamiento. Que puede ser positivo para la inclusión en Chile, pero no puede hacerse a la carrera en 45 días en una ley de presupuesto. En ninguna democracia del mundo eso se acepta”, señaló.';
+
+
+var stopwordsOk = 	['a', 'all', 'an', 'and', 'are', 'as', 'at', 'be', 'but', 'by', 'can', 'do', 'for', 'from', 'had', 'have' , 'if', 'in', 'is', 'it', 'me', 'my', 'no', 'not', 'of', 'on', 'or', 'our', 's', 'so', 't', 'that', 'the', 'their', 'they', 'this', 'to', 'us', 'was', 'we', 'who', 'with', 'you', ,'"', '”', '’”' ,'“' ]; 
+
+var palabrasClave = ["arbol", "bebe", "cacuca", "donald", "xilofon"];
+var resultOk;//rv para sacar results de la funcion
+
+
+
+/* Reference from https://github.com/simonw/wordcounter/blob/master/index.html*/ 
+function countWords(s, stopwords) {
+	/* Need to split up words, but NOT split on apostrophes. Solution is to 
+	   first replace punctuation we don't care about (like fullstops and 
+	   commas) with spaces, then extract all non-whitespace sequences. */
+	s = s.toLowerCase();
+	s = s.replace(/[\.\,\;\:\!\?\(\)\&]/g, ' ');
+	var re = /\S+/ig;
+	var m, word;
+	var counts = {};
+
+	while ((m = re.exec(s)) != null) {
+		word = m[0];
+		if (!stopwords[word]) {
+			//parte rv cuenta palabras especificas/	
+			for (var i = 0; i < palabrasClave.length; i++) {
+				if (word == palabrasClave[i]) {//cuenta las palabras clave a buscar
+				counts[word] = (counts[word] || 0) + 1;//registra las palabras clave a buscar. 
+				}
+			} // de rv
+		}
+	}
+
+	var results = [];
+	for (var word in counts) {
+		results.push([word, counts[word]]);
+	}
+	results = results.sort(function(a, b) { //esta funcion ordena
+		return ((a[1] < b[1]) ? -1 : ((a[1] > b[1]) ? 1 : 0));
+	});
+
+	results.reverse();
+	resultsOk = results.reverse();
+	return results;
+}
+
+
+
+window.onload = function() {
+//origninal 	var input = document.getElementsByName('input')[0];
+	//rv
+	var input = txt2;//rv texto entrada para analizar
+	var output = document.getElementsByName('output')[0];
+	var results = document.getElementById('results');
+	var form = document.forms[0];
+	var categoriaElegida = "";//rv es el texto de la categoria elegida
+
+	form.onsubmit = function() {
+		 //var stopwords = document.getElementsByName('stopwords')[0].value.split(/\s+/);
+		//rv
+		var stopwords = [];
+		for (var i = 0; i < stopwords.length; i++) {
+			stopwords = stopwordsOk[i];//llena stopwords con las palabras del array stopWordsOk
+		}//rv
+
+		var stopwords_lookup = {};
+		for (var i = 0, word; word = stopwords[i]; i++) {
+			stopwords_lookup[word] = 1;
+		}
+
+		//orig// var counts = countWords(input.value, stopwords_lookup);
+		var counts = countWords(input, stopwords_lookup);//rv
+		var s = '';
+		var masRepetida = counts[counts.length-1][0];//RV;
+
+
+		//rv checkea que la mas leida eliga una categoria
+		if (masRepetida == "arbol") {
+			categoriaElegida = " / arbol elige categoria a / ";
+		} else if (masRepetida == "bebe") {
+			categoriaElegida = " / bebe elige categoria b / ";
+		} else if (masRepetida == "xilofon") {
+			categoriaElegida = " / xilofon elige categoria x / ";
+		}
+		//rv
+
+		for (var i = 0; i < counts.length; i++) {
+			//r para mostrar valores separados de count 
+ 			s += "LA MAS REPETIDA { " +  masRepetida + " } (A) PALABRA: " + counts[i][0] + " (B) CANTIDAD: " +  counts[i][1] + categoriaElegida + '\n'; 
+		}
+
+		output.value = s ;
+		results.style.display = 'inline';
+		return false;
+	}
+}
+
+</script>
+
+
+
+</head>
+<body>
+
+<form action="/" method="get">
+	<p><input type="submit" value="Cuenta Palabras NYT"></p>
+	<div class="textareas">
+		<span id="results" style="display: none">
+ 			<textarea name="output" rows="40" cols="80"></textarea>
+		</span>
+	</div>
+</form>
+ 
+
+</body>
+</html>

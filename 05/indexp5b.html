@@ -1,61 +1,47 @@
 <html>
 <head>
 
-<title>-PopUpTexto</title>
+<title>-MáquinaCondor</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <link href='https://fonts.googleapis.com/css?family=Crete+Round|Oswald&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="_css/style.css">
-
 
 <script language="javascript" type="text/javascript" src="_lib/p5.js"></script>
 <script language="javascript" type="text/javascript" src="_lib/p5.dom.js"></script>
 <!--<script language="javascript" src="libraries/p5.sound.js"></script>-->
 <!--<script language="javascript" type="text/javascript" src="scriptapi.js"></script>-->
 <script language="javascript" type="text/javascript" src="script.js"></script>
-  
-<style> 
+<script language="javascript" type="text/javascript" src="scriptapi_money.js"></script>
+<script language="javascript" type="text/javascript" src="scriptapi_periodico.js"></script>
+
  
-#textopopup {
-  position:   relative;
-  height:     auto;
-  width:     auto;
-  padding:    10px;
-  background-color: black;
-  display: table; /* para centrar cela interior del texto */
-  margin-left: 250px;
-}
-
-#textopopup p {
-    height: auto;
-    font-family: 'Oswald', sans-serif;
-     font-size: 14px;
-    letter-spacing: 0.5px;
-  }
-
-#poema p {
-  margin: 0;
-}
-
-</style>
 
 </head>
+
 <body>
 
-  <div id="textopopup">
-      <div id="poema">
-        <p>
-        La aparición de esta palabra (<a id="palabra1Div">p1</a>) en el verso<br>
-        se debe a que (<a id="nombreADiv"> palabra asociada </a>) aparece (<a id="palabra2Div">x veces</a> ) el (hora y fecha)<br>
-        en los articulos del Periódico New York Times<br>
-        Además esta influida por la variacion <br>
-        en la relación dolar - euro: (valores dolar y euro) <br>
-        </p>
-      </div>
+
+  <div id="wrap">
+
+    <div id="header"> 
+      <H1>Máquina Condor | Demian Schopf</H1>
+      <h2> sobre el proyecto </h2>
+    </div>
+
+    <div id="poema">
+         <a id="nombreADiv"> </a>
+         <a id="palabra1Div">1Mariposa</a> 
+        <a id="palabra2Div">2cobarde</a>
+     </div>
+
+    
+
   </div>
 
 

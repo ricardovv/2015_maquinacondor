@@ -1,27 +1,62 @@
-html, body {
-  background-color: white;
-  height: 100%;
-  width: 100%;
+body {
   padding: 0px;
   margin: 0px;
 }
-
 
 #wrap {
-  width: 100%;
-  height: 100%;
-  padding: 0px;
-  margin: 0px;
-  display: table; /* para centrar cela interior del texto */
-  margin-left: 200px;
-}
-#wrap p {
-    height: 20px;
-    font-family: 'Oswald', sans-serif;
-    color:  DodgerBlue;
-    font-size: 14px;
-    letter-spacing: 1.2px;
+  background-image: url('../_img/img2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+ width: 100%;
+ height: 100%;
+   display: table; /* para centrar cela interior del texto */
+ }
+
+#poemacaja {
+   height: auto;
+  width: 50%;
+  margin: 15%  auto auto  20%;
   }
+
+#poema {
+  vertical-align: middle;
+  /* font-family: 'EB Garamond', serif;*/
+  font-family: 'Oswald', sans-serif; 
+  font-size: 24px;
+  color:  DodgerBlue;
+  text-align: center;
+}
+
+#poema p {
+  background-color: white;
+    color: black;
+    letter-spacing: 0px;
+    text-align:left;
+    padding: 20px;
+    margin: 0px;
+    line-height: 200%;
+  }
+
+#poema a{
+  color: darkred;
+}
+#poema a:hover {
+  color: red; 
+}
+#bajada p {
+  background-color: black;
+  color: white;
+  letter-spacing: 0px;
+  padding: 14px;
+  margin: 2px 0px 0px 0px;
+  vertical-align: middle;
+  font-family: 'EB Garamond', serif;
+  font-size: 11px;
+  color:  white;
+  text-align: right;
+  line-height: 20%;
+  letter-spacing: 1px;
+}
 
 #header {
   width: 100%;
@@ -30,77 +65,86 @@ html, body {
   padding: 0px;
   margin: 0px;
 }
+
 #header h1 {
   width: auto;
   height: auto;
   background-color: black;
   padding: 2px 5px 2px 5px;
   margin: 0px;
-    position: fixed;
-    top: 5px;
-    right: 5;
-    font-family: 'Oswald', sans-serif;
-    color: yellow;
-    font-size: 12px;
-    letter-spacing: 1.5px;
+  position: fixed;
+  top: 5px;
+  right: 5;
+  font-family: 'Oswald', sans-serif;
+  color: yellow;
+  font-size: 13px;
+  letter-spacing: 1.5px;
  }
 
-#header h2 {
+#header h2, #header a {
   width: auto;
   height: auto;
   background-color: black;
   padding: 2px 5px 2px 5px;
   margin: 0px;
-    position: fixed;
-    top: 28px;
-    right: 5px;
+  position: fixed;
+  top: 32px;
+  right: 5px;
   font-family: 'Oswald', sans-serif;
   color: yellow;
   font-size: 12px;
   letter-spacing: 1.5px;
   text-align: right;
+  text-decoration: none;
  }
-
-#poema {
-  width: 98%;  
-  height: 100%;
-  padding: 0px 20px;
-       background-color: white;
-    display: table-cell;
-    vertical-align: middle;
-    border-left: 1px solid grey; 
+#header a:hover {
+  background-color: red;
   }
 
-#poema a{
+  a.tooltipHeader span {
+  width:200px; 
+  height:250px; 
+  background: yellow;
+  display:none; 
+  right: 0px;
+  margin-top:20px; 
+  padding:2px 2px; 
+  font-family: 'EB Garamond', serif;
+  font-size: 12px;
+  text-align: left;
+  line-height: 120%;
+}
+
+a.tooltipHeader:hover span{
+/* detalle tooltip */  
+  display:inline;
+  padding: 8px 8px;  
+  color: black;
+  position:absolute; 
+}
+
+#header h3 {
+  background-color: white ;
+  padding: 2px;
+  margin: 0px;
+  position: fixed;
   color: red;
-}
-#poema a:hover {
-  color: DodgerBlue; 
-}
-
-#poema p {
-    /* font-family: 'Open Sans', sans-serif; */
-    color: black;
-    font-size: 24px;
-    letter-spacing: 0px;
-    text-align:left;
-    padding: 5px 0px 5px 0px;
-    margin-left: 0px ;
-  }
+  font-size: 14px;
+ }
 
 
 #pie {
     /* font-family: 'Open Sans', sans-serif; */
-    background-color: black;
-    color: yellow;
-    width: 212px;
-    height: 100% ;
+    background-color: greywhite;
+    color: black;
+    width: 250px;
+    height: 10%;
     font-size: 10px;
     letter-spacing: 0px;
     line-height: 12px;
+
     padding: 0px;
-    position: fixed;
-     left: 0px;
+    left: 0px;
     text-align: right;
     display: table-cell;
     vertical-align: middle;
@@ -116,29 +160,31 @@ html, body {
   }
 
 #nombreAdiv, #palabra1Div, #palabra2Div {
-  color:red;
+  color:black;
 }
 
-
- /* detalle tooltip viejo - - - - - - - - - - - - - - - - - - -
 
 /* detalle tooltip - - - - - - - - - - - - - - - - - - - */
 /* Easy CSS Tooltip - by Koller Juergen [www.kollermedia.at] */
 /* {font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; }*/
-a {background:yellow; padding:4px 4px; text-decoration:none;} /*BG color is a must for IE6*/
-a:hover {background:black; padding:4px 4px; text-decoration:none;} /*BG color is a must for IE6*/
+a.tooltip {background:moccasin; padding:4px 4px; text-decoration:none;} /*BG color is a must for IE6*/
+
+a.tooltip:hover {background:yellow; color:red; padding:0px 4px; text-decoration:none;} /*BG color is a must for IE6*/
+
 a.tooltip span {
   display:none; 
-  margin-top:-100px; 
-padding:2px 2px; 
-  width:140px; height:90px; 
+  margin-top:-122px; 
+  padding:2px 2px; 
+  width:160px; height:120px; 
   font-size: 12px; 
   font-family:'Oswald',sans-serif; 
 }
+
 a.tooltip:hover span{
+/* detalle tooltip */  
   display:inline;
-  padding:2px 2px;  
-  color: grey;
+  padding: 8px 8px;  
+  color: brown;
   position:absolute; 
   background-image: url("../_img/flecha.png");
 }
