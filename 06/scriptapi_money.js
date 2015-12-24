@@ -1,18 +1,29 @@
 
 // A wind direction vector
 var wind;
-// Circle position
 var position;
+
+
+var result;
+function preload() {
+  result = loadStrings('https://api.fixer.io/latest');
+}
+
+function setup() {
+   var ind = floor(random(result.length));
+  text(result[ind], 10, 10, 80, 80);
+}
+
 
 function setup() {
   createCanvas(200, 4);
   //-- Request the data from openweathermap
   var url = 'http://api.openweathermap.org/data/2.5/weather?q=New%20York,NY&units=imperial&APPID=7bbbb47522848e8b9c26ba35c226c734';
   loadJSON(url, gotWeather);
-  //-- Circle starts in the middle
-  //position = createVector(width/2, height/2);
-  //-- wind starts as (0,0)
-  //wind = createVector();
+
+  var ind = floor(random(result.length));
+  text(result[ind], 10, 10, 80, 80);
+
 }
 
 function draw() {

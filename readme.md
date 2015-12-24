@@ -10,35 +10,39 @@ Algunas tareas principales en desarrollo (contienen subtareas):
 
 1 monedas
 
-* -Leer monedas (en desarrollo)
-* -Transformar valor en valor util (en desarrollo)
-* +Seleccionar de lista (sistema listo para recibir valor)
-* +Representar (sistema de representación listo)
+* -Leer monedas (en desarrollo, resolviendo same domain policy)
+* -Transformar moneda en valor selector de palabras (sistema listo para recibir valor de moneda)
+* +Seleccionar de lista (sistema listo para recibir valor transformado)
+* +Representar (sistema de representación listo, falta limpiar referencias de array)
 
 2 Diario
 
-* -Lista palabras a buscar (hecho array, integrado)
-* +Leer datos diario (captura via API NewYork Times lista)
-* +Parsear y buscar palabras en artículos (listo)
-* +Rankear palabras (listo)
+* +Lista palabras a buscar (array listo e integrado)
+* +Leer datos diario (captura via API NewYork Times ok)
+* +Parsear y buscar palabras en artículos (listo módulo para replicar)
+* +Rankear palabras (listo, lee la primera)
 * +Seleccionar categoría (en integración al main thread)
-* +Representar (mecanismo listo, falta integrar al main thread)
+* +Representar (mecanismo listo)
 
 3 Representación 
 
-* +Sistema cambio de letras
-* +Sistema cambio según cantidad de segundos
+* +Estilos generales (listo)
+* +Lectura  online de fuentes (Google Fonts, listo)
+* +Sistema cambio de letras (listo)
+* +Sistema cambio según cantidad de segundos (listo)
 * +vinculos hipertexto (listo en _self) 
-* +tooltips (listo, falta integracion datos)
+* +ventana nueva lista (falta integrar datos monedas)
 
 4 Responsibidad
 
 * +responsibidad monitor (listo)
-* -responsibidad ipad (en desarrollo esperando aprobación final para terminarlo)
--responsibidad celular (en desarrollo esperando aprobación final para terminarlo)
+* -responsibidad ipad (en desarrollo, con sistema final se terminará)
+* -responsibidad celular (en desarrollo, con sistema final se terminará)
 
 5 Extras
 
-* +sobre la obra - sobre el autor (listo, falta aprobación)
-* -animación texto (en exploración)
- 
+* +sobre la obra - sobre el autor (listo, falta afinar estilo)
+* +cambio automático de animaciones bg (sistema listo)
+* -animaciones gif (en proceso) 
+
+Según lo anterior, el proyecto esta en un 85% de avance, restando integrar algunos sistemas y refinar representación.

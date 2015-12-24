@@ -8,54 +8,77 @@
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica' rel='stylesheet' type='text/css'>
 
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="_css/style.css">
-
 
 <script language="javascript" type="text/javascript" src="_lib/p5.js"></script>
 <script language="javascript" type="text/javascript" src="_lib/p5.dom.js"></script>
-<!--<script language="javascript" src="libraries/p5.sound.js"></script>-->
-<!--<script language="javascript" type="text/javascript" src="scriptapi.js"></script>-->
 <script language="javascript" type="text/javascript" src="script.js"></script>
   
+
+<script type="text/javascript">
+    window.onload   = function(){  
+       var divbg    = document.getElementById("textopopup");  
+       var imgarray = new Array("dron1.gif", "dron2.gif", "dron3.gif");  
+       var spot     = Math.floor(Math.random()* imgarray.length);  
+       divbg.style.background=  "url(_img/" + imgarray[spot] + ")";  
+     }  
+
+    function cambiaPalabra1() {
+      //Codigo para pruebas rapidas
+      var palabra1Selector  = 5 + Math.floor(Math.random()* 4);  
+      var palabra1Div       = document.getElementById("popupPalabra1Div");  
+      var marcador        = "array " + palabra1Selector + ": ";
+      palabra1Div.innerHTML = marcador + palabra1categoria1[palabra1Selector];  
+//      palabra1Div.innerHTML = "Holas";  
+
+    }
+
+
+var popupRecarga = setInterval(cambiaPalabra1, 500); //ex myVar1
+
+</script>
+
 <style> 
-
- 
-#textopopup {
-  position:   relative;
-  height:     auto;
-  width:     auto;
-  padding:    10px;
-  background-color: black;
-  display: table; /* para centrar cela interior del texto */
-  margin-left: 250px;
-}
-
-#textopopup p {
-    height: auto;
-    font-family: 'Oswald', sans-serif;
-     font-size: 14px;
-    letter-spacing: 0.5px;
-  }
-
-#poema p {
-  margin: 0;
-}
-
+    #textopopup {
+      height:     100%;
+      width:     100%;
+ /*      background-color: black;
+*/      display: table; /* para centrar cela interior del texto */
+    }
+    #textopopup p {
+      background-color: white;
+        padding: 15px;
+        font-family: 'Oswald', sans-serif;
+        font-size: 28px;
+        letter-spacing: 0.2px;
+        line-height: 190%;
+      }
+    #textopopup a {
+      color: red;
+    }
+    #texto {
+      vertical-align: middle;
+      width:     100%;
+      margin-top: 10%;
+      margin-left: 0%;
+    }
 </style>
 
-</head>
-<body>
 
+</head>
+
+<body>
   <div id="textopopup">
-      <div id="poema">
-        <p>
-        La aparición de la palabra (palabra1) en el verso se debe a una conjunción entre dos datos.<br>  
-        El primero, es que la palabra (palabra motor de búsqueda) aparece (x) veces el (fecha hora)<br>
-        en los articulos del Periódico <a href="http://www.nytimes.com/" target="_blank">The New York Times</a> examinados por la Máquina Cóndor.<br>
-        El segundo, es porque la relación de la divisa (elegir entre venta y compra) compra de (X moneda dada)<br> 
-        con respecto a (y moneda dada) es de (numero q haya cambiado). 
-        </p>
+      <div id="texto">
+            <p>
+            La aparición de la palabra <a id="popupPalabra1Div">(palabrax1)</a> en el verso se debe a una conjunción entre dos datos.<br>  
+            El primero, es que la palabra (palabra motor de búsqueda) aparece (x) veces el (fecha hora)<br>
+            en los articulos del Periódico <a href="http://www.nytimes.com/" target="_blank">The New York Times</a> examinados por la Máquina Cóndor.<br>
+            El segundo, es porque la relación de la divisa (elegir entre venta y compra) compra de (X moneda dada)<br> 
+            con respecto a (y moneda dada) es de (numero q haya cambiado). 
+            </p>
+      <a href="" id="palabra1Div">(palabrax1)</a>
       </div>
   </div>
 

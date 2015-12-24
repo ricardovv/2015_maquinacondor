@@ -64,12 +64,12 @@ function cambiaPalabra1() {
   var palabra1Selector  = Math.floor(Math.random()* palabra1categoria1.length);  
   var palabra1Div       = document.getElementById("palabra1Div");  
   palabra1Div.innerHTML = palabra1categoria1[palabra1Selector];  
-  //setea atributyo del link de la palabra
+  //setea atributo del link de la palabra
   palabra1Div.setAttribute('href', linkPalabra1Lista[0]);
   palabra1Div.setAttribute('target', "_blank"); 
   palabra1Div.setAttribute('class', "tooltip"); 
 
-  //Tooltip Inner Elements
+  //Tooltip Inner Elements para index texto
   var innerTooltipData = "<span>" + "valor XX" + "</span>";
   var innerPalabra1      =  palabra1categoria1[palabra1Selector];
   palabra1Div.innerHTML = innerTooltipData + innerPalabra1;  

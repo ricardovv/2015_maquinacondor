@@ -44,19 +44,22 @@ background-image: url('https://media.giphy.com/media/xTiTnETmpPnreri35u/giphy.gi
 #poema a:hover {
   color: red; 
 }
-#bajada p {
+#bajada {
   background-color: black;
-  color: white;
-  letter-spacing: 0px;
-  padding: 14px;
+  padding: 4px 15px 5px 15px;
   margin: 2px 0px 0px 0px;
   vertical-align: middle;
+
   font-family: 'EB Garamond', serif;
   font-size: 11px;
-  color:  white;
   text-align: right;
-  line-height: 20%;
+  color:  white;
   letter-spacing: 1px;
+  line-height: 20%;
+
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
 }
 
 #header {
