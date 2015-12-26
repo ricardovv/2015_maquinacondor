@@ -312,22 +312,27 @@ var valorDeCorte3 = 3.0;
 var valorDeCorte4 = 4.0;
 var seleccionado;
 // - - - - - - -  - - - - - - -  - - - - - - -  - - - - - - -  - - - - - - -  - - - - - - -  - - - - - - - 
-// TRABAJANDO ACA< VIENDO VALORS DE CORTE PARA ELEGIR CATEGORIAS
+// TRABAJANDO ACA. VALORS DE CORTE OK, DESARROLAR SELECICON DE LISTA DE PALABRAS
 // - - - - - - -  - - - - - - -  - - - - - - -  - - - - - - -  - - - - - - -  - - - - - - -  - - - - - - - 
 //Muestra valores
 function entregaComparacion() {
   valorVar1 = money1(money1Low, money1High);
-  if (valorVar1 < valorDeCorte1) {
+  if (valorVar1 <= valorDeCorte1) {
     seleccionado = "> Menor q valorDeCorte1 " + valorDeCorte1;
   }
-  if (valorVar1 >= valorDeCorte1 && valorVar1 < valorDeCorte2 ) {
+
+  if (valorVar1 > valorDeCorte1 && valorVar1 <= valorDeCorte2 ) {
     seleccionado = ">> Menor q valorDeCorte2 " + valorDeCorte2;
   }
-  if (valorVar1 >= valorDeCorte2 && valorVar1 < valorDeCorte3 ) {
+  
+  if (valorVar1 > valorDeCorte2 && valorVar1 <= valorDeCorte3 ) {
     seleccionado = ">>> Menor q valorDeCorte3 " + valorDeCorte3;
-  } else {
+  } 
+
+  else if (valorVar1 > valorDeCorte3 && valorVar1 <= valorDeCorte4 ){
     seleccionado = ">>>> Menor q valorDeCorte4"+ valorDeCorte4;
   }
+
 }
 
 

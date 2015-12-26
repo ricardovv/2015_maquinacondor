@@ -45,4 +45,9 @@ Algunas tareas principales en desarrollo (contienen subtareas):
 * +cambio automático de animaciones bg (sistema listo)
 * -animaciones gif (en proceso) 
 
+
+Fuentes de datos utilizadas
+para moonedas: https://currencylayer.com/
+para transformar articulos en datos mas estruturados: http://alloworigin.com/
+
 Según lo anterior, el proyecto esta en un 85% de avance, restando integrar algunos sistemas y refinar representación.
