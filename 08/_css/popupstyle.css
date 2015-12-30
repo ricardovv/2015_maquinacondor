@@ -1,0 +1,28 @@
+body{
+}
+
+#textopopup {
+  height:     100%;
+  width:     100%;
+  /*      background-color: black;
+  */      display: table; /* para centrar cela interior del texto */
+}
+#textopopup p {
+  background-color: white;
+  padding: 15px;
+  font-family: 'Roboto Condensed', "Helvetica Neue", "Segoe UI", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 26px;
+  font-weight: normal;
+  color: black;
+  letter-spacing: -0.1px;
+  line-height: 150%;
+}
+#textopopup a {
+  color: red;
+}
+#texto {
+  vertical-align: middle;
+  width:     100%;
+  margin-top: 10%;
+  margin-left: 0%;
+}

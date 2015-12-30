@@ -1,0 +1,156 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Word counter</title>
+<style type="text/css">
+div.textareas textarea {
+	vertical-align: middle;
+}
+</style>
+
+
+<script type="text/javascript">
+var pasaValorAPopup = "":
+
+
+// var txt1 =  'But Mrs. arbol arbol arbol bebe cacuca xilofon Clinton also strove to recognize something stirring in the electorate that Mr. Donald "When was the last time you saw a Chevrolet in Tokyo?" Trump had clearly tapped into. “It’s O.K., it’s O.K. to be afraid,” she said. “When bad things happen, it does cause anxiety and fear,” she added. “But then you pull yourself together and, especially, if you want to be a leader of our country, and you say: ‘O.K., what are we going to do about it? How are we going to be prepared?’” ';
+
+// var txt2 =  'But Mrs. arbol bebe bebe bebe bebe cacuca xilofon Joseph Stiglitz, el afamado Premio Nobel de Economía del año 2001, puso el dedo en la llaga respecto al sistema de pensiones de nuestro país y abrió la puerta para validar un posible cambio de fondo al modelo chileno en este tema, al señalar que se debería transitar a un sistema público. Invitado al cierre de un seminario organizado por la comisión que estudia cambios al sistema de AFP y que preside David Bravo, el economista hizo –vía videoconferencia– un duro diagnóstico del funcionamiento del sistema financiero mundial, el cual, aseguró, no funcionó ni antes ni después de la crisis subprime de 2008.';
+
+// var txt3 =  'arbol bebe cacuca cacuca cacuca cacuca xilofon Tras deliberar ante el pleno del TC, el abogado señaló que la gratuidad era una política “legítima” por parte del gobierno, pero que esta debía ser aplicada por un mecanismo correcto. “Lo que nosotros decimos es que no puede usarse una ley de presupuesto que se tramita a la carrera, en forma precipitada, y que solo tiene por objeto crear los ingresos y gastos y estimarlos para hacer toda una reforma sustantiva a la educación superior y su financiamiento. Que puede ser positivo para la inclusión en Chile, pero no puede hacerse a la carrera en 45 días en una ley de presupuesto. En ninguna democracia del mundo eso se acepta”, señaló.';
+
+ var txt4 = "administration bebe campaign democratic POLITICS To Hillary Clinton, Donald \"I promise not to talk about your massive plastic surgeries\" Trump Is No Longer a Laughing Matter By AMY CHOZICK and MAGGIE HABERMANDEC. 10, 2015 J. Donald \"That baby was driving me crazy\" Trump, in Raleigh N.C., last Friday, has caused the Democrats to try to figure out the roots of his appeal. Credit Ray Whitehouse for The New York Times WATERLOO, Iowa — Until Monday, when J. Donald \"I think I am a nice person\" Trump proposed a ban on Muslims entering the United States, Hillary Clinton could hardly keep herself from laughing at the mention of his name. “I’m sorry, I can’t help it,” she told ABC News on Sunday, letting out a giggle that made advisers squirm. She is no longer laughing. At a town hall here on Wednesday, Mrs. Clinton delivered her most damning, direct criticism of Mr. Donald \"I have a great relationship with the blacks\" Trump, saying that civil administration";
+
+// var txt0 =  'But Mrs. arbol arbol arbol bebe cacuca xilofon Clinton also strove to recognize something stirring in the electorate that Mr. Donald "When was the last time you saw a Chevrolet in Tokyo?" Trump had clearly tapped into. \“It’s O.K., it’s O.K. to be afraid,\” she said. “When bad things happen, it does cause anxiety and fear,” she added. “But then you pull yourself together and, especially, if you want to be a leader of our country, and you say: ‘O.K., what are we going to do about it? How are we going to be prepared arbol bebe cacuca cacuca cacuca cacuca xilofon Tras deliberar ante el pleno del TC, el abogado señaló que la gratuidad era una política “legítima” por parte del gobierno, pero que esta debía ser aplicada por un mecanismo correcto. “Lo que nosotros decimos es que no puede usarse una ley de presupuesto que se tramita a la carrera, en forma precipitada, y que solo tiene por objeto crear los ingresos y gastos y estimarlos para hacer toda una reforma sustantiva a la educación superior y su financiamiento. Que puede ser positivo para la inclusión en Chile, pero no puede hacerse a la carrera en 45 días en una ley de presupuesto. En ninguna democracia del mundo eso se acepta\”, señaló. administration bebe campaign democratic POLITICS To Hillary Clinton, Donald \"I promise not to talk about your massive plastic surgeries\" Trump Is No Longer a Laughing Matter By AMY CHOZICK and MAGGIE HABERMANDEC. 10, 2015 J. Donald \"That baby was driving me crazy\" Trump, in Raleigh N.C., last Friday, has caused the Democrats to try to figure out the roots of his appeal. Credit Ray Whitehouse for The New York Times WATERLOO, Iowa — Until Monday, when J. Donald \"I think I am a nice person\" Trump proposed a ban on Muslims entering the United States, Hillary Clinton could hardly keep herself from laughing at the mention of his name. \“I\’m sorry, I can\’t help it,\” she told ABC News on Sunday, letting out a giggle that made advisers squirm. She is no longer laughing. At a town hall here on Wednesday, Mrs. Clinton delivered her most damning, direct criticism of Mr. Donald \"I have a great relationship with the blacks\" Trump, saying that";
+
+
+var stopwordsOk = 	['a', 'all', 'an', 'and', 'are', 'as', 'at', 'be', 'but', 'by', 'can', 'do', 'for', 'from', 'had', 'have' , 'if', 'in', 'is', 'it', 'me', 'my', 'no', 'not', 'of', 'on', 'or', 'our', 's', 'so', 't', 'that', 'the', 'their', 'they', 'this', 'to', 'us', 'was', 'we', 'who', 'with', 'you', ,'"', '”', '’”' ,'“', '\t' ]; 
+
+
+var palabrasClave = ["activists", "administration", "adversarial", "adversary", "aggression", "aid", "alliance", "ambassador", "ambush", "ambushed", "analysts", "annihilation", "antitank", "arm", "armored", "arms", "arsenal", "artillery", "assassinate", "assassination", "assault", "atomic", "attack", "attacks", "bank", "banking", "barrel", "barrels", "battle", "billion", "billions", "blockade", "blood", "boat", "bodies", "bomb", "bombardments", "bombed", "bombers", "bombings", "bombs", "bought", "brigade", "broken", "brutal", "brutality", "brutally", "bunker", "bunkers", "buried", "bussines", "buy", "campaign", "campaigns", "camps", "capital", "capitalization", "capitals", "captured", "casualties", "cause", "cease-fire", "cease", "cents", "chevron", "civil", "civilian", "civilians", "cleared", "climbed", "coffin", "combat", "combats", "command", "commander", "commerce", "companies", "company's", "company", "conflict", "consum", "consumers", "consumption", "controls", "corp.", "cost", "costs", "council", "crimes", "crisis", "criticism", "crossfire", "crude", "cuba's", "cuba", "cuban", "cubic", "damage", "dead", "deal", "deals", "death", "demand", "demanding", "deported", "destroyed", "destroying", "destruction", "detainees", "deter", "detonated", "died", "disagreement", "disagreements", "disarmament", "disarmed", "disarmed", "disproportionate", "division", "divisions", "dollar", "dollars", "dow", "economy", "emergency", "energy", "entertainment", "escalate", "escalates", "escalation", "euro", "euros", "evacuated", "exchange", "executed", "executing", "exile", "exiled", "exodus", "exploited", "explosives", "extracting", "exxon", "feet", "fields", "fierce", "fight", "fighters", "fighting", "fire", "fired", "force", "forces", "fought", "fuel", "fundamentalist", "fundamentalistic", "fundamentalists", "funding", "funds", "gain", "gallon", "gas", "gasoline", "geopolitical", "global", "grenades", "guerrilla", "guerrillas", "gunmen", "gunned", "habana", "habanna", "havanna", "headquarter", "headquarters", "health", "helicopter", "helicopters", "hidden", "hit", "hitting", "hostilities", "hunt", "hunting", "hunts", "inciting", "increase", "industry", "infantry", "inflation", "injured", "insurgent", "intervene", "intervention", "interventions", "invaded", "invasion", "investment", "investors", "jet", "jets", "kidnapped", "kidnapping", "kidnappings", "kill", "killed", "killing", "kills", "launched", "launcher", "launches", "market", "martyr", "martyrs", "medical", "miami", "militant", "militants", "military", "militia", "militias", "million", "millions", "mines", "ministry", "missiles", "mission", "mob", "mobil's", "mobile", "money", "mortar", "munition", "nasdaq", "negotiate", "negotiated", "negotiation", "network", "networks", "nuclear", "occupyng", "offensive", "oil-rich", "oil's", "oil", "oilfield", "opec", "operating", "operation", "operations", "opponents", "organization", "paratroopers", "patrol", "pay", "payment", "petroleum", "pipeline", "pipelines", "points", "power", "precision", "pressure", "price", "prices", "prision", "prisioner", "producer", "product", "production", "profit", "profitabel", "profitability", "profits", "provoking", "pump", "punishing", "rage", "rages", "raid", "raids", "rais", "raises", "refineries", "refining", "refugee", "refugees", "refused", "reject", "rejects", "religious", "remotely", "reprisal", "reprisals", "research", "reserves", "resistance", "resources", "retaliation", "reuters", "revolution", "revolutionary", "rights", "riot", "rising", "rockets", "rose", "sale", "security", "service", "services", "shelled", "shelling", "shells", "shells", "shelter", "shooting", "state", "storms", "stormy", "strategic", "strategy", "strategy", "strikes", "striking", "struck", "suicide-bombings", "suicide", "surgery", "suspected", "tactic", "tactics", "tanks", "tanks", "target", "targeted", "targets", "tax", "taxes", "tension", "tensions", "territories", "territory", "terrorism", "trade", "traders", "trades", "trading", "training-camps", "treasury", "troops", "tunnel", "tunneled", "u.n", "unwilling", "violated", "violation", "violations", "violence", "violent", "war", "warplanes", "wars", "weapons", "weapons", "wounded", "wounding", "yen"];
+
+//var palabrasClave = ["administration", "democrat", "clinton", "donald", "trump"];
+
+var resultOk;//rv para sacar results de la funcion
+
+
+
+/* Reference from https://github.com/simonw/wordcounter/blob/master/index.html*/ 
+function countWords(s, stopwords) {
+	/* Need to split up words, but NOT split on apostrophes. Solution is to 
+	   first replace punctuation we don't care about (like fullstops and 
+	   commas) with spaces, then extract all non-whitespace sequences. */
+	s = s.toLowerCase();
+	//orig
+	//s = s.replace(/[\.\,\;\:\!\?\(\)\&]/g, ' ');
+	s = s.replace(/[\n\.\,\;\:\!\?\(\)\&]/g, ' ');
+	var re = /\S+/ig;
+	var m, word;
+	var counts = {};
+
+	while ((m = re.exec(s)) != null) {
+		word = m[0];
+		if (!stopwords[word]) {
+			//parte rv cuenta palabras especificas/	
+			for (var i = 0; i < palabrasClave.length; i++) {
+				if (word == palabrasClave[i]) {//cuenta las palabras clave a buscar
+				counts[word] = (counts[word] || 0) + 1;//registra las palabras clave a buscar. 
+				}
+			} // de rv
+		}
+	}
+
+	var results = [];
+	for (var word in counts) {
+		results.push([word, counts[word]]);
+	}
+	results = results.sort(function(a, b) { //esta funcion ordena
+		return ((a[1] < b[1]) ? -1 : ((a[1] > b[1]) ? 1 : 0));
+	});
+
+	results.reverse();
+	resultsOk = results.reverse();
+	return results;
+}
+
+
+
+window.onload = function() {
+//origninal 	var input = document.getElementsByName('input')[0];
+	//rv
+	var input = txt4;//rv texto entrada para analizar
+	var output = document.getElementsByName('output')[0];
+	var results = document.getElementById('results');
+	var form = document.forms[0];
+	var categoriaElegida = "";//rv es el texto de la categoria elegida
+
+	form.onsubmit = function() {
+		 //var stopwords = document.getElementsByName('stopwords')[0].value.split(/\s+/);
+		//rv
+		var stopwords = [];
+		for (var i = 0; i < stopwords.length; i++) {
+			stopwords = stopwordsOk[i];//llena stopwords con las palabras del array stopWordsOk
+		}//rv
+
+		var stopwords_lookup = {};
+		for (var i = 0, word; word = stopwords[i]; i++) {
+			stopwords_lookup[word] = 1;
+		}
+
+		//orig// var counts = countWords(input.value, stopwords_lookup);
+		var counts = countWords(input, stopwords_lookup);//rv
+		var s = '';
+		var masRepetida = counts[counts.length-1][0];//RV;
+
+
+		//rv checkea que la mas leida eliga una categoria
+		if (masRepetida == "administration") {
+			categoriaElegida = " / elige categoria a / ";
+		} else if (masRepetida == "baby") {
+			categoriaElegida = " / elige categoria b / ";
+		} else if (masRepetida == "campaign") {
+			categoriaElegida = " / elige categoria c / ";
+		} else if (masRepetida == "democratic") {
+			categoriaElegida = " / elige categoria d / ";
+		} else if (masRepetida == "trump") {
+			categoriaElegida = " / elige categoria t / ";
+		} else {
+			categoriaElegida = " / pasa nada /";
+		}
+		//rv
+
+		for (var i = 0; i < counts.length; i++) {
+			//r para mostrar valores separados de count 
+ 			s += "mas repetida [ " +  masRepetida + " ] elige categoria " + categoriaElegida  + " palabra " + counts[i][0] + " [ "+  counts[i][1] + " ] veces." + '\n'; 
+		}
+
+		output.value = s ;
+		results.style.display = 'inline';
+		pasaValorAPopup = masRepetida; 
+		return false;
+	}
+}
+
+</script>
+
+
+
+</head>
+<body>
+
+<form action="/" method="get">
+	<p><input type="submit" value="Cuenta Palabras NYT"></p>
+	<div class="textareas">
+		<span id="results" style="display: none">
+ 			<textarea name="output" rows="40" cols="80"></textarea>
+		</span>
+	</div>
+</form>
+
+ 
+
+</body>
+</html>
