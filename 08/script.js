@@ -339,6 +339,15 @@ function muestraMoneda() {
 
 //toma valores de las palabras para pasarlos al popopup
 var valorPopupPalabra1 = "";
+var valorPopupPalabra2 = "";
+var valorPopupPalabra3 = "";
+var valorPopupPalabra4 = "";
+var valorPopupPalabra5 = "";
+var valorPopupPalabra6 = "";
+var valorPopupPalabra7 = "";
+var valorPopupPalabra8 = "";
+var valorPopupPalabra9 = "";
+var valorPopupPalabra = "";
 var valorPopupPalabraBuscada = getPalabra;
 var valorPopupPalabraBuscadaVeces = getApariciones;
 var valorPopupPalabraBuscadaFecha = "día <b>"+fecha+"</b> de <b>"+mesNombre+"</b>";
@@ -346,7 +355,37 @@ var valorPopupMoneda1 = "";
 var valorPopupMoneda2 = "";
 var valorPopupMonedaValor = "";
 
-function abreVentana() {
+function abreVentana(numeroPalabra) {
+  if (numeroPalabra == 1) {
+    valorPopupPalabra = valorPopupPalabra1;
+  }
+  if (numeroPalabra == 2) {
+    valorPopupPalabra = valorPopupPalabra2;
+  }
+  if (numeroPalabra == 3) {
+    valorPopupPalabra = valorPopupPalabra3;
+  }
+  if (numeroPalabra == 4) {
+    valorPopupPalabra = valorPopupPalabra4;
+  }
+  if (numeroPalabra == 5) {
+    valorPopupPalabra = valorPopupPalabra5;
+  }
+  if (numeroPalabra == 6) {
+    valorPopupPalabra = valorPopupPalabra6;
+  }
+  if (numeroPalabra == 7) {
+    valorPopupPalabra = valorPopupPalabra7;
+  }
+  if (numeroPalabra == 8) {
+    valorPopupPalabra = valorPopupPalabra8;
+  }
+  if (numeroPalabra == 9) {
+    valorPopupPalabra = valorPopupPalabra9;
+  }
+
+
+
   newwindow2=window.open('','name','');
      
   var tmp = newwindow2.document;
@@ -359,7 +398,7 @@ function abreVentana() {
   // contenidos  
   tmp.write('<div id="textopopup"><div id="texto"><p>');
   // frase 1
-  tmp.write('La aparición de la palabra <a id="palabra1Div">' + valorPopupPalabra1 + '</a> en el verso se debe a una conjunción entre dos datos.<br>');
+  tmp.write('La aparición de la palabra <a id="palabra1Div">' + valorPopupPalabra + '</a> en el verso se debe a una conjunción entre dos datos.<br>');
   // frase 2 
   tmp.write('El primero, es que la palabra "<b>' + valorPopupPalabraBuscada + '</b>" aparece <b>' + valorPopupPalabraBuscadaVeces + '</b> veces el ' + valorPopupPalabraBuscadaFecha + '<br>'); 
   // frase 3
@@ -426,6 +465,8 @@ function cambiaPalabra2() {
   var palabraQuaVa      = categoriaSeleccionada[palabraNumero][palabra2Selector];
   palabra2Div.innerHTML = palabraQuaVa;  
 
+  valorPopupPalabra2 = palabraQuaVa;//entreva valor de palabra para el popup
+
   //setea atributyo del link de la palabra
   // palabra2Div.setAttribute('href', linkPalabra1Lista[0]);
   // palabra2Div.setAttribute('target', "_blank"); 
@@ -440,6 +481,8 @@ function cambiaPalabra3() {
   var palabra3Div       =document.getElementById("palabra3Div"); 
   var palabraQuaVa      = categoriaSeleccionada[palabraNumero][palabra3Selector];
   palabra3Div.innerHTML = palabraQuaVa;  
+
+  valorPopupPalabra3 = palabraQuaVa;//entreva valor de palabra para el popup
 
   //setea atributyo del link de la palabra
   // palabra3Div.setAttribute('href', linkPalabra1Lista[0]);
@@ -456,6 +499,8 @@ function cambiaPalabra4() {
   var palabraQuaVa      = categoriaSeleccionada[palabraNumero][palabra4Selector];
   palabra4Div.innerHTML = palabraQuaVa;  
 
+  valorPopupPalabra4 = palabraQuaVa;//entreva valor de palabra para el popup
+
   //setea atributyo del link de la palabra
   // palabra4Div.setAttribute('href', linkPalabra1Lista[0]);
   // palabra4Div.setAttribute('target', "_blank"); 
@@ -470,6 +515,8 @@ function cambiaPalabra5() {
   var palabra5Div=document.getElementById("palabra5Div");  
   var palabraQuaVa      = categoriaSeleccionada[palabraNumero][palabra5Selector];
   palabra5Div.innerHTML = palabraQuaVa;  
+
+  valorPopupPalabra5 = palabraQuaVa;//entreva valor de palabra para el popup
 
   //setea atributyo del link de la palabra
   // palabra5Div.setAttribute('href', linkPalabra1Lista[0]);
@@ -486,6 +533,8 @@ function cambiaPalabra6() {
   var palabraQuaVa      = categoriaSeleccionada[palabraNumero][palabra6Selector];
   palabra6Div.innerHTML = palabraQuaVa;  
 
+  valorPopupPalabra6 = palabraQuaVa;//entreva valor de palabra para el popup
+
   //setea atributyo del link de la palabra
   // palabra6Div.setAttribute('href', linkPalabra1Lista[0]);
   // palabra6Div.setAttribute('target', "_blank"); 
@@ -500,6 +549,8 @@ function cambiaPalabra7() {
   var palabra7Div=document.getElementById("palabra7Div");  
   var palabraQuaVa      = categoriaSeleccionada[palabraNumero][palabra7Selector];
   palabra7Div.innerHTML = palabraQuaVa;  
+
+  valorPopupPalabra7 = palabraQuaVa;//entreva valor de palabra para el popup
 
   //setea atributyo del link de la palabra
   // palabra7Div.setAttribute('href', linkPalabra1Lista[0]);
@@ -516,6 +567,8 @@ function cambiaPalabra8() {
   var palabraQuaVa      = categoriaSeleccionada[palabraNumero][palabra8Selector];
   palabra8Div.innerHTML = palabraQuaVa;  
 
+  valorPopupPalabra8 = palabraQuaVa;//entreva valor de palabra para el popup
+
   //setea atributyo del link de la palabra
   // palabra8Div.setAttribute('href', linkPalabra1Lista[0]);
   // palabra8Div.setAttribute('target', "_blank"); 
@@ -531,6 +584,8 @@ function cambiaPalabra9() {
   var palabraQuaVa      = categoriaSeleccionada[palabraNumero][palabra9Selector];
   palabra9Div.innerHTML = palabraQuaVa;  
   
+  valorPopupPalabra9 = palabraQuaVa;//entreva valor de palabra para el popup
+
   //setea atributyo del link de la palabra
   // palabra9Div.setAttribute('href', linkPalabra1Lista[0]);
   // palabra9Div.setAttribute('target', "_blank"); 

@@ -1,0 +1,79 @@
+<html>
+<head>
+
+<title>-PopUpTexto</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link href='https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica' rel='stylesheet' type='text/css'>
+
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="_css/style.css">
+
+<script language="javascript" type="text/javascript" src="_lib/p5.js"></script>
+<script language="javascript" type="text/javascript" src="_lib/p5.dom.js"></script>
+<script language="javascript" type="text/javascript" src="script.js"></script>
+  
+
+
+<style> 
+    #textopopup {
+      height:     100%;
+      width:     100%;
+ /*      background-color: black;
+*/      display: table; /* para centrar cela interior del texto */
+    }
+    #textopopup p {
+      background-color: white;
+      padding: 15px;
+      font-family: 'Roboto Condensed', "Helvetica Neue", "Segoe UI", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-size: 26px;
+      font-weight: normal;
+      color: black;
+      letter-spacing: -0.1px;
+      line-height: 150%;
+  }
+    #textopopup a {
+      color: red;
+    }
+    #texto {
+      vertical-align: middle;
+      width:     100%;
+      margin-top: 10%;
+      margin-left: 0%;
+    }
+</style>
+
+
+</head>
+
+<body>
+  <div id="textopopup">
+
+
+      <div id="texto">
+  <div id="recive">recive</div>
+            <p>
+            La aparición de la palabra <a id="palabra1Div">(palabrax1)</a> en el verso se debe a una conjunción entre dos datos.<br>  
+            El primero, es que la palabra (palabra motor de búsqueda) aparece (x) veces el (fecha hora)<br>
+            en los articulos del Periódico <a href="http://www.nytimes.com/" target="_blank">The New York Times</a> examinados por la Máquina Cóndor.<br>
+            El segundo es porque el valor de compra del ¨dólar¨ en relación a la ¨libra¨ es de ¨1.2345.¨<br> 
+            </p>
+       </div>
+  </div>
+
+<script type="text/javascript">
+    
+    window.onload   = function(){  
+       var divbg    = document.getElementById("textopopup");  
+       var imgarray = new Array("dron2.gif", "dron2.gif", "dron3.gif");  
+       var spot     = Math.floor(Math.random()* imgarray.length);  
+       divbg.style.background=  "url(_img/" + imgarray[spot] + ")";        
+     }  
+
+    
+</script>
+
+
+
+</body>
+</html>
