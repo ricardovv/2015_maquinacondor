@@ -9,7 +9,7 @@
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-var getApariciones = 18;
+var getApariciones = 23;
 var getPalabra = "administration";
 
 var d = new Date();
@@ -18,7 +18,6 @@ var dia     =   d.getDay();
 var hora    =   d.getHours();
 var minutos =   d.getMinutes();
  
-
 var mm=new Date();
 var m2 = mm.getMonth() + 1;
 var mesok = (m2 < 10) ? '0' + m2 : m2;
@@ -44,7 +43,7 @@ var mesNombre = mesok[mm.getMonth()];
 // FONDOS ALEATORIOS
 window.onload=function(){  
    var divbg=document.getElementById("wrap");  
-   var imgarray = new Array("dron1.gif", "dron2.gif");  
+   var imgarray = new Array("imgbg01.gif", "imgbg02.gif");  
    var spot =Math.floor(Math.random()* imgarray.length);  
    divbg.style.background="url(_img/"+imgarray[spot]+")";  
    divbg.style.backgroundSize="cover";  
@@ -57,17 +56,29 @@ window.onload=function(){
 //CARGA MONEDA
 var counterCargaJSON = 0;
   // variables globales para accceder, se actualizan luego
-    var   moneda0;
-    var   moneda1;
-    var   moneda2;
-    var   moneda3;
-    var   moneda4;
-    var  moneda5;
-    var  moneda6;
-    var   moneda7;
-    var   moneda8;
-    var   moneda9;
-    var   monedaSuma;
+    var   monedaValor0;
+    var   monedaValor1;
+    var   monedaValor2;
+    var   monedaValor3;
+    var   monedaValor4;
+    var   monedaValor5;
+    var   monedaValor6;
+    var   monedaValor7;
+    var   monedaValor8;
+    var   monedaValor9;
+    var   monedaValorSuma;
+    //valores para output html
+    var   monedaOutput0;
+    var   monedaOutput1;
+    var   monedaOutput2;
+    var   monedaOutput3;
+    var   monedaOutput4;
+    var   monedaOutput5;
+    var   monedaOutput6;
+    var   monedaOutput7;
+    var   monedaOutput8;
+    var   monedaOutput9;
+    var   monedaOutputSuma;
 
 
 //llama JSON, segun tiempo de regarga general. 
@@ -108,40 +119,44 @@ var http_request = new XMLHttpRequest();
         // Javascript function para parsear lso datos de JSON
         var jsonObj = JSON.parse(http_request.responseText);
         // variable jsonObj contiene los datos y la estructura.
-        //https://en.wikipedia.org/wiki/List_of_circulating_currencies  
-        //USD - US Dollar
-        //GBP - British Pound
-        //EUR - Euro
-        //JPY - Yen Japones
-        //CNY - Yuan Chino
-        //RUB - Rublo Ruso
-        //AUD - Australian Dollar
-        //CPL - Peso Chileno 
-        //BOB - Bolivar Boliviano 
-      moneda0 = jsonObj.source;
-      moneda1 = jsonObj.quotes.USDUSD;
-      moneda2 = jsonObj.quotes.USDGBP;
-      moneda3 = jsonObj.quotes.USDEUR;
-      moneda4 = jsonObj.quotes.USDJPY;
-      moneda5 = jsonObj.quotes.USDCNY;
-      moneda6 = jsonObj.quotes.USDRUB;
-      moneda7 = jsonObj.quotes.USDAUD;
-      moneda8 = jsonObj.quotes.USDBOB;
-      moneda9 = jsonObj.quotes.USDCLP;
-      monedaSuma= moneda1 + moneda1 + moneda2 + moneda3 + moneda4 + moneda5 + moneda6 + moneda7 + moneda8 + moneda9;
+        //https://en.wikipedia.org/wiki/List_of_circulating_currencies 
+        monedaValor0 = jsonObj.source;
+        monedaValor1 = jsonObj.quotes.USDUSD;  //USD - US Dollar
+        monedaValor2 = jsonObj.quotes.USDGBP;  //GBP - British Pound
+        monedaValor3 = jsonObj.quotes.USDEUR;  //EUR - Euro
+        monedaValor4 = jsonObj.quotes.USDJPY;  //JPY - Yen Japones
+        monedaValor5 = jsonObj.quotes.USDCNY;  //CNY - Yuan Chino
+        monedaValor6 = jsonObj.quotes.USDRUB;  //RUB - Rublo Ruso
+        monedaValor7 = jsonObj.quotes.USDAUD;  //AUD - Australian Dollar
+        monedaValor8 = jsonObj.quotes.USDBOB;  //CPL - Peso Chileno 
+        monedaValor9 = jsonObj.quotes.USDCLP;  //BOB - Bolivar Boliviano 
+        monedaValorSuma= monedaValor0 + monedaValor1 + monedaValor2 + monedaValor3 + monedaValor4 + monedaValor5 + monedaValor6 + monedaValor7 + monedaValor8 + monedaValor9;
+
+        // valores para output html
+        monedaOutput0    = "Moneda Principal: "   + monedaValor0;
+        monedaOutput1    = "Dolar Americano:  "   + monedaValor1;
+        monedaOutput2    = "British Pound: "      + monedaValor2;
+        monedaOutput3    = "Euro: "               + monedaValor3;
+        monedaOutput4    = "Yen Japones: "        + monedaValor4;
+        monedaOutput5    = "Yuan Chino:  "        + monedaValor5;
+        monedaOutput6    = "Rublo Ruso: "         + monedaValor6;
+        monedaOutput7    = "Dolar Australiano: "  + monedaValor7;
+        monedaOutput8    = "Bolivar Boliviano: "  + monedaValor8;
+        monedaOutput9    = "Peso Chileno: "       + monedaValor9;
+        monedaOutputSuma   = monedaValorSuma;
 
         // updaters de html
-        document.getElementById("moneda0").innerHTML  = "Moneda Principal: "  + moneda0;
-        document.getElementById("moneda1").innerHTML  = "Dolar Americano:  "  + moneda1;
-        document.getElementById("moneda2").innerHTML  = "British Pound: "   + moneda2;
-        document.getElementById("moneda3").innerHTML  = "Euro: "        + moneda3;
-        document.getElementById("moneda4").innerHTML  = "Yen Japones: "   + moneda4;
-        document.getElementById("moneda5").innerHTML  = "Yuan Chino:  "   + moneda5;
-        document.getElementById("moneda6").innerHTML  = "Rublo Ruso: "    + moneda6;
-        document.getElementById("moneda7").innerHTML  = "Dolar Australiano: " + moneda7;
-        document.getElementById("moneda8").innerHTML  = "Bolivar Boliviano: " + moneda8;
-        document.getElementById("moneda9").innerHTML  = "Peso Chileno: "    + moneda9;
-        document.getElementById("monedaSuma").innerHTML   = monedaSuma;
+        document.getElementById("moneda0").innerHTML  = monedaOutput0;
+        document.getElementById("moneda1").innerHTML  = monedaOutput1;
+        document.getElementById("moneda2").innerHTML  = monedaOutput2;
+        document.getElementById("moneda3").innerHTML  = monedaOutput3;
+        document.getElementById("moneda4").innerHTML  = monedaOutput4;
+        document.getElementById("moneda5").innerHTML  = monedaOutput5;
+        document.getElementById("moneda6").innerHTML  = monedaOutput6;
+        document.getElementById("moneda7").innerHTML  = monedaOutput7;
+        document.getElementById("moneda8").innerHTML  = monedaOutput8;
+        document.getElementById("moneda9").innerHTML  = monedaOutput9;
+        document.getElementById("monedaSuma").innerHTML   = monedaOutputSuma;
       }// cierre if
   }// cierre FUNCTION
    // - - - - - - - - - - - - - - - - - - - - - - - 
@@ -160,8 +175,9 @@ var nombreALista = ["Arafat", "Jamal", "Ayman", "Abdullah", "Mohammad", "Anas", 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 //PALABRAS 1 al 9
+
 var categoria1 =  [  
-                          ["bóveda", "coyuntura", "cámara", "nervadura"], 
+                          ["Bóveda", "Coyuntura", "Cámara", "Nervadura"], 
                           ["craneal", "encefálica", "medular", "ocular"], 
                           ["inerte", "exánime", "exangüe", "comatoso"], 
                           ["objetamente", "ascépticamente", "impecablemente", "sirúrgicamente"], 
@@ -173,7 +189,7 @@ var categoria1 =  [
                           ];
  
 var categoria2 =  [  
-                          ["llagar", "membrana", "tejido", "epitelio"], 
+                          ["Llagar", "Membrana", "Tejido", "Epitelio"], 
                           ["sublingual", "lacrimal", "muscular", "intestinal"], 
                           ["inficcionada", "norgánica", "endrogámica", "negantrópica"], 
                           ["supuración", "expectoración", "secreción", "psiquiatríz"], 
@@ -185,7 +201,7 @@ var categoria2 =  [
                           ];
 
 var categoria3 =  [ 
-                          ["concavidad", "caverna", "cuenca", "fosa"], 
+                          ["Concavidad", "Caverna", "Cuenca", "Fosa"], 
                           ["nasal", "uterina", "himenal", "trompal"], 
                           ["estéril", "yerma", "deseca", "baldía"], 
                           ["por", "por", "por", "por"], 
@@ -197,7 +213,7 @@ var categoria3 =  [
                           ];
 
 var categoria4 =  [ 
-                          ["mariposa", "nínfulo", "lucífera", "crisálido"], 
+                          ["Mariposa", "Nínfulo", "Lucífera", "Crisálido"], 
                           ["cobarde", "evitable", "salival", "soslyable"], 
                           ["temeraria", "eutanasia", "quebrada", "distanasia"], 
                           ["fatalmente", "disfásicamente", "ascépticamente", "objetamente"], 
@@ -221,10 +237,10 @@ function traeResultadosBuscador(){
 }
 
 
-
+/*
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 //PALABRAS 1 al 9
-/*
+
 var categoria1 =  [  
                           ["c1_p1_1_bóveda", "c1_p1_2_coyuntura", "c1_p1_3_cámara", "c1_p1_4_nervadura"], 
                           ["c1_p2_1_craneal", "c1_p2_2_encefálica", "c1_p2_3_medular", "c1_p2_4_ocular"], 
@@ -272,9 +288,9 @@ var categoria4 =  [
                           ["c4_p8_1_obstinada", "c4_p8_2_obsecada", "c4_p8_3_elíptica", "c4_p8_4_eclíptica"], 
                           ["c4_p8_1_alas", "c4_p8_2_ánforas", "c4_p8_3_urnas", "c4_p8_4_nichos"]
                           ];
-*/
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+*/
 
 //LISTA DE LINKS
 var linkNombreLista = ["http://drones.pitchinteractive.com"]
@@ -330,7 +346,7 @@ function entregaComparacion() {
 }
 //Muestra valores
 function muestraMoneda() {
-  document.getElementById("valorMoneda1").innerHTML = valorVar1 + output_seleccionado;  
+ // document.getElementById("valorMoneda1").innerHTML = valorVar1 + output_seleccionado;  
 }
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -404,9 +420,9 @@ function abreVentana(numeroPalabra) {
   // frase 3
   tmp.write('en los articulos del Periódico <a href="http://www.nytimes.com/" target="_blank">The New York Times</a> examinados por la Máquina Cóndor.<br>');
   // frase 4 
-  tmp.write('El segundo es porque el valor de compra del ' + '<a href="https://www.instaforex.com/" target="_blank">(Dólar)</a>' + 
-    ' en relación a '+ '<a href="https://www.instaforex.com/" target="_blank">(Libra)</a> es de ' + 
-    '<a href="https://www.instaforex.com/" target="_blank">' + moneda2 + '</a>.<br>'); 
+  tmp.write('El segundo es porque el valor de compra del ' + '<a href="http://co.apilayer.net/" target="_blank"> "Dolar americano" </a>' + 
+    ' en relación a '+ '<a href="http://co.apilayer.net/" target="_blank"> "Libra Inglesa" </a> es de ' + 
+    '<a href="http://co.apilayer.net/" target="_blank">' + monedaOutput2 + '</a>.<br>'); 
 
   // cierre divs
   tmp.write('</p></div></div>');
@@ -433,7 +449,7 @@ function cambiaNombreA() {
   nombreADiv.innerHTML = nombreALista[nombreASelector];  
   
   //set atributos del link de la palabra o nombre
-  nombreADiv.setAttribute('href', linkNombreLista[nombreASelector]);
+  nombreADiv.setAttribute('href', linkNombreLista[0]);
   nombreADiv.setAttribute('target', "_blank"); 
   nombreADiv.setAttribute('class', "tooltip"); 
 }
@@ -593,11 +609,37 @@ function cambiaPalabra9() {
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+var cajaOverlay; 
+function mostrar(cual){
+  cajaOverlay           =   document.getElementById("cajaOverlay");
+    /* estilos overlay*/
+  cajaOverlay.style.position        =  'absolute';
+  cajaOverlay.style.top             =  0;
+  cajaOverlay.style.backgroundColor =  'rgba(0, 0, 0, 0.8)';
+  cajaOverlay.style.display         =  'inline';
+  /*resize y posicion */
+  cajaOverlay.style.width           = window.innerWidth + 'px';
+  cajaOverlay.style.height          = window.innerHeight + 'px';
+  cajaOverlay.style.top             = window.pageXOffset + 'px'; 
 
+  headerSobreObra                   =   document.getElementById("sobreobra");
+  headerSobreArtista                =   document.getElementById("sobreartista");
 
+  if(cual == 1){//abre sobre obra, pero debe cerrar sobreartista
+    headerSobreArtista.style.display  =  'none';
+    headerSobreObra.style.display  =  'inline';
+  } 
+  if(cual == 2){//abre sobre artista, pero debe cerrar sobreobra
+    headerSobreObra.style.display  =  'none';
+    headerSobreArtista.style.display  =  'inline';
+  } 
+ }//cierre monstrar
 
-
-
+function cerrar(){
+  document.getElementById("sobreobra").style.display    =  'none';
+  document.getElementById("sobreartista").style.display =  'none';
+  document.getElementById("cajaOverlay").style.display  = "none";
+}
 
 
 
@@ -614,10 +656,11 @@ function cambiaTodo(){
   cambiaPalabra7();
   cambiaPalabra8();
   cambiaPalabra9();
-  
+
   entregaComparacion();
   muestraMoneda(); 
-}  
+}   
+
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
@@ -625,11 +668,23 @@ function cambiaTodo(){
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 //UPDATERS // ABAJO PARA Q CAMBIE CUANDO CARGA TODO LOD EMAS
-var tiempoRecargaJSON = setInterval(llamaJSON, 1000); //recarga el json 3600000 ms una hora 
+var tiempoRecargaJSON = setInterval(llamaJSON, 360000); //recarga el json 3600000 ms una hora 
+var tiempoCambiaTodo = 4000;// para que cambie y regargue el poema en su totalidad. 
+
+var counter = tiempoCambiaTodo/1000; //inicializa contador tiempo reversa de pie de pagina. dividio x mil
+
+function counterGeneracionPoema() {
+if (counter == 0) {
+  counter = tiempoCambiaTodo/1000;
+} counter--;
+ document.getElementById("outputTiempo").innerHTML = counter;  
+};
+setInterval(counterGeneracionPoema, 999); //llama cada segundo el cointer del poema
+
+setInterval(cambiaTodo, tiempoCambiaTodo); //llama el cambio de todo 
 
 
-var tiempo = 1500;
-var tiempoRecarga = setInterval(cambiaTodo, tiempo); //ex myVar1
+
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

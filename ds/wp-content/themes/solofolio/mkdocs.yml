@@ -1,0 +1,20 @@
+site_name: SoloFolio
+site_url: http://www.solofol.io
+site_description: A WordPress theme for the creatively inclined.
+site_author: Joel Hawksley
+copyright: 2015 Joel Hawksley, All content licensed MIT
+repo_url: https://github.com/joelhawksley/solofolio
+theme: ""
+theme_dir: docs_theme
+pages:
+- [index.md, Home]
+- [installation.md, Installation]
+- [wordpress-settings.md, WordPress Settings]
+- [customizer.md, Customizer]
+- [galleries.md, Galleries]
+- [blog-posts.md, Blog Posts]
+- [menus-widgets.md, Menus & Widgets]
+- [about-page.md, About Template]
+- [parent-page.md, Parent Template]
+- [story-page.md, Story Template]
+- [splash-page.md, Splash Page]

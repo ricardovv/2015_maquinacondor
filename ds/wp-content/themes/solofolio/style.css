@@ -1,0 +1,1113 @@
+/*
+Theme Name: SoloFolio
+Theme URI: http://solofol.io/
+Description: SoloFolio is a simple and professional theme built specifically for photography portfolio websites. Features include responsive photo galleries with retina images, a no-compromises experience for mobile/tablet users, custom widgets for dropdown menus and social media icons, WooCommerce compatiblity, live location via Blink, and integration with Photoshelter BEAM template Element.
+Version: 7.0.108
+Author: Joel Hawksley
+Author URI: http://www.joelhawksley.com/
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column, two-columns, fluid-layout, responsive-layout, full-width-template, theme-options, photoblogging
+Text Domain: solofolio
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section { display: block }
+ol,
+ul { list-style: none }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html { font-size: 16px }
+body {
+  font-family: 'Roboto', Helvetica, Verdana, Arial, Utkal, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  font-weight: normal;
+  line-height: 1.3;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+dd, dt, li, p { line-height: 1.6em }
+p, table, ul, ol { margin: 1rem 0 }
+dd { margin-bottom: 1em }
+th { font-weight: bold }
+.bypostauthor {
+  border-left: 5px solid rgba(125,125,125,.2);
+  padding-left: .5rem;
+}
+th { background-color: rgba(125,125,125,.2) }
+td, th { padding: .5rem 1rem .5rem 1rem; border: 1px solid rgba(125,125,125,.2); }
+dt { font-weight: bold; margin-top: .5rem; }
+li { list-style-type: square; list-style-position: inside; }
+ul ul, ol ol { margin-left: 1rem }
+ol li { list-style-type: decimal }
+code, pre, tt, var { background-color: rgba(125,125,125,.2); }
+pre { padding: .5rem; word-wrap: break-word;}
+em, cite { font-style: italic }
+sup, sub { font-size: .7em }
+sup { vertical-align: super }
+sub { vertical-align: sub }
+acronym { text-transform: uppercase }
+acronym, abbr { border-bottom: .1em dotted }
+blockquote p, .sticky { padding: 1em; border-left: 8px solid rgba(125,125,125,.2); }
+blockquote cite { display: block; margin-top: 1em; }
+strong { font-weight: bold }
+img { border: none }
+/* Floats */
+.left { float: left }
+.right { float: right }
+.entry .alignleft { padding-right: 1rem; }
+.entry .alignright { padding-left: 1rem; }
+/* Images */
+/* Links */
+a { font-weight: bold }
+a:link,
+a:visited {
+  text-decoration: none;
+  outline: none !important;
+}
+a:hover,
+a:active {
+  outline: none !important;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+a img {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+}
+a:hover img { text-decoration: none }
+.more-link {
+  display: block;
+  margin: 1rem 0;
+}
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 1rem;
+  padding: 0;
+}
+h1 { font-size: 3rem }
+h2 { font-size: 1.86rem }
+h3 { font-size: 1.28rem }
+h4 { font-size: 1rem }
+h5 { font-size: .85rem }
+small {
+  font-size: .85rem;
+  line-height: 1;
+}
+.header-content h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+.header-content ul { margin: 0; }
+p {
+  padding: 0;
+  max-width: 600px;
+}
+p:first-child { margin-top: 0 }
+.site-title {
+  font-weight: bold;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+.site-title a:link,
+.site-title a:visited { background-color: transparent }
+.site-title a:hover,
+.site-title a:active { background-color: transparent }
+.header a { font-weight: normal }
+.logo {
+  line-height: 1;
+  width: auto;
+}
+.header-content ul li {
+  font-size: 12px;
+  font-weight: normal;
+  list-style-type: none;
+  list-style-position: initial;
+}
+.sidebar-widget, .solofolio-custom-menu { margin-top: 15px }
+input,
+button {
+  height: 2rem;
+  vertical-align: top;
+}
+.form-submit input,
+.searchform button {
+  cursor: pointer;
+  line-height: 1;
+}
+.searchform button {
+  margin-left: .25rem;
+  width: 2rem;
+}
+.logo-img a { display: inline-block }
+.logo a img {
+  border: none;
+  font-weight: normal;
+  text-decoration: none;
+  max-width: 100%;
+}
+.logo a img:hover { border: none }
+.site-title { font-size: 24px }
+.site-title a { font-weight: bold }
+.footer {
+  border-top-left-radius: 2px;
+  font-size: .78rem;
+  line-height: 1;
+}
+.footer:hover { opacity: 1 }
+.footer:hover .copyright-label { display: none }
+.footer:hover .copyright-hidden { display: block }
+.post-meta { margin-bottom: 1em }
+.post-byline { font-weight: normal }
+h2.post-title {
+  font-size: 22px;
+  margin-bottom: .25rem;
+}
+h2.post-title a { font-weight: normal; }
+.entry .tag-links { max-width: 600px }
+.entry .tag-links a { padding: 0 2px }
+.content-index,
+.content-search { width: 100% }
+.content-about { max-width: 900px }
+.content-about-image {
+  width: 50%;
+  float: right;
+  padding: 0 0 2rem 2rem;
+}
+.content-about-image img {
+  width: 100%;
+  height: auto;
+}
+.content-about-content {
+  float: left;
+  width: 50%;
+  max-width: 500px;
+  display: block;
+}
+input, textarea, button {
+  background-color: transparent;
+  border-radius: 2px;
+  margin: 0;
+  padding: .5rem;
+}
+input:focus, textarea:focus, button:focus { outline: none }
+#respond label { display: block }
+.comments-area h3 { font-weight: bold }
+.comments { padding-bottom: 3rem; max-width: 600px; }
+.comment { margin-bottom: 1rem }
+.comments h4.comment-author { margin-bottom: 0 }
+.comment-list li {
+  list-style-type: none;
+  margin-bottom: 1.5rem;
+}
+.comment-list li p:last-child {
+  margin-bottom: 0;
+}
+.comment-meta { margin-bottom: .5rem }
+.comments h4, .comments h4 a {
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: .25rem;
+}
+.comments small {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+.comments p.form-submit { margin: 0 }
+.comments p.form-submit input {
+  background-color: transparent;
+  float: right;
+  max-width: 100%;
+  width: auto;
+}
+.comments textarea {
+  display: block;
+  height: 225px;
+}
+.comments input, .comments textarea { width: 100%; }
+.entry .aligncenter { display: block }
+.entry img {
+  display: block;
+  margin-bottom: 1em;
+  height: auto;
+  max-width: 100%;
+}
+.entry img:first-child { margin-top: 0 }
+.entry .wp-caption img { margin: 0 }
+.alignleft { float: left }
+.alignright { float: right }
+.wp-caption { margin-bottom: 1rem }
+.wp-caption-text,
+.caption,
+.wp-caption .wp-caption-text, .vert-scroll .wp-caption-text, .gallery-caption {
+  font-size: .9rem;
+  line-height: 1.4;
+  padding-top: .2rem;
+  margin-top: 0;
+  max-width: inherit;
+}
+.content-parent { max-width: 920px }
+.content-parent .content { padding: 0 1rem }
+.content-parent .children {
+  margin-top: 0;
+  max-width: inherit !important;
+}
+.content-parent .children h3 { margin: 0 }
+.content-parent .children li {
+  display: inline-block;
+  max-width: 300px;
+  width: 32.8%;
+  padding: 0 1rem 2rem 1rem;
+  vertical-align: top;
+}
+.content-parent .children li img {
+  height: auto;
+  width: 100%;
+}
+.content-parent .children li:hover img { opacity: .7 }
+.pagination-nav { padding-bottom: 2em }
+.pagination-nav a { margin: 1em 0 }
+.pagination-nav h4 { margin-bottom: .25rem }
+.pagination-nav .right h4 { text-align: right }
+.solofolio-social a { padding: 10px }
+.solofolio-social a:first-child { padding-left: 0 }
+.solofolio-vert-scroll-gallery { margin-bottom: 1rem }
+.vert-scroll { margin: 1rem auto 0; }
+.vert-scroll:first-child { margin-top: 0; }
+.vert-scroll:last-child { margin-bottom: 0; }
+.vert-scroll .wp-caption-text {
+  text-align: left;
+  max-width: 900px;
+}
+.vert-scroll img {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 0;
+  width: auto;
+  height: auto;
+  opacity: 0;
+}
+.solofolio-cyclereact-thumbs { display: none }
+/* Centering */
+.content-index { width: 100% }
+.content-index .entry .wp-caption { max-width: 100% }
+.content-page img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+/* Grid */
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+[class*='col-'] {
+  float: left;
+  padding-right: 20px;
+}
+.grid [class*='col-']:last-of-type {
+  padding-right: 0;
+}
+.col-2-3 { width: 66.66% }
+.col-1-3 { width: 33.33% }
+.col-1-2 { width: 50% }
+.col-1-4 { width: 25% }
+.col-1-8 { width: 12.5% }
+.module { padding: 20px }
+/* Custom menu widget */
+.solofolio-custom-menu h3 { cursor: pointer }
+.solofolio-custom-menu h3:after { content: " +";}
+.solofolio-custom-menu.visible h3:after { content: " -";}
+.solofolio-custom-menu ul { display: none }
+/* Fix WP admin bar overlap */
+.admin-bar .header { top: 32px }
+/* Helpers */
+.no-margin { margin: 0 }
+.pagination-nav:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* Story template */
+.menu-btn { display: none }
+.page-template-story-php .wrapper img { display: block }
+.page-template-story-php .wrapper h1,
+.page-template-story-php .wrapper h3 { text-align: center }
+.page-template-story-php .vert-scroll.vert-scroll-full .wp-caption-text {
+  max-width: 100% !important;
+  padding: 0 1rem;
+}
+.lazyload,
+.lazyloading {
+    opacity: 0;
+}
+.lazyloaded {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+/* Blink Map */
+.blink-map iframe {
+  max-width: 600px;
+  width: 100% !important;
+  margin-bottom: 1rem;
+}
+.clear { clear: both }
+/* WooCommerce Integration */
+.woocommerce #sidebar,
+.woocommerce-result-count,
+.widget_shopping_cart_content .product_list_widget,
+.widget_shopping_cart_content .total,
+.woocommerce .page-title,
+.woocommerce-ordering,
+.woocommerce .woocommerce-info:before,
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active:before,
+.woocommerce-page #content div.product .woocommerce-tabs ul.tabs:before,
+.woocommerce #content div.product .woocommerce-tabs ul.tabs:after,
+.woocommerce div.product .woocommerce-tabs ul.tabs li:after,
+.woocommerce div.product .woocommerce-tabs ul.tabs:before { display: none !important }
+.woocommerce .woocommerce-info {
+  border: none;
+  background: none;
+  border: none;
+  text-shadow: none;
+  box-shadow: none;
+  padding: 0 !important;
+}
+.woocommerce ul.products li.product a img,
+.woocommerce-page div.product div.images img { box-shadow: none }
+.woocommerce-page .related ul.products li.product { max-width: 250px }
+.woocommerce div.product h2, .woocommerce div.product p { max-width: none }
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs { padding-left: 0 }
+.woocommerce div.product .woocommerce-tabs ul.tabs li { margin: 0; }
+.woocommerce div.product .woocommerce-tabs ul.tabs li:first-child { padding-left: 0; }
+.woocommerce div.product .woocommerce-tabs ul.tabs li a { text-shadow: none }
+.woocommerce-page div.product .woocommerce-tabs ul.tabs li.active {
+  background: none;
+  border-bottom: none;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
+  border-bottom: 1px solid;
+}
+
+/* Media Queries */
+
+@-ms-viewport { width: device-width; }
+
+@media only screen and (min-width: 1025px) {
+  .page-template-story-php .vert-scroll-window:first-child { margin-top: 1rem }
+  .page-template-story-php p { margin-top: 2rem; margin-bottom: 2rem; }
+  body.page-template-story-php .vert-scroll.vert-scroll-full {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .entry { margin-bottom: 3rem; }
+  .menu-icon { display: none }
+  .header {
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    bottom: 40px;
+    left: 0;
+  }
+  .wrapper {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 20px;
+    left: 20px;
+  }
+  .footer {
+    bottom: 0;
+    opacity: .5;
+    padding: 4px 8px;
+    position: fixed;
+    right: 0;
+    z-index: 1000;
+  }
+  .copyright-hidden { display: none }
+  .solofolio-cyclereact-wrap {
+    position: absolute;
+    overflow-x: visible;
+    overflow-y: visible;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .solofolio-cyclereact-stage {
+    position: absolute;
+    overflow-x: visible;
+    overflow-y: visible;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .solofolio-cyclereact-gallery {
+    position: absolute;
+    overflow-x: visible;
+    overflow-y: visible;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .solofolio-cyclereact-slide {
+    position: absolute;
+    overflow-x: visible;
+    overflow-y: visible;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+  }
+  .solofolio-cyclereact-slide .wp-caption-text {
+    display: none;
+  }
+  .solofolio-cyclereact-slide .image {
+    display: block;
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+  }
+  .solofolio-cyclereact-slide img {
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+    max-width: 100%;
+    display: block;
+    position: relative;
+  }
+  .solofolio-cyclereact-title {
+    position: fixed !important;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    z-index: 3;
+  }
+  .solofolio-cyclereact-title-wrapper {
+    display: table;
+    height: 100%;
+    width: 100%;
+  }
+  .solofolio-cyclereact-title-content {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .solofolio-gallery-title h2 { text-align: center }
+  .solofolio-gallery-title p { margin: 0 auto 1em }
+  ul.solofolio-cyclereact-controls { margin: 0; line-height: 1;}
+  .solofolio-cyclereact-controls a { font-weight: normal }
+  .solofolio-cyclereact-sidebar.buttons a {
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
+    margin-right: 15px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .solofolio-cyclereact-sidebar.text li {
+    display: inline-block;
+    line-height: 1;
+    margin-right: .5rem;
+    margin-top: .5rem;
+  }
+  .solofolio-cyclereact-image { z-index: 2 }
+  .solofolio-cyclereact-nav-left,
+  .solofolio-cyclereact-nav-thumbs,
+  .solofolio-cyclereact-nav-right {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+  }
+  .solofolio-cyclereact-nav-left {
+    cursor: w-resize;
+    left: 0;
+    width: 33.333333%;
+  }
+  .solofolio-cyclereact-nav-thumbs {
+    cursor:context-menu;
+    left: 33.333333%;
+    width: 33.333333%;
+  }
+  .solofolio-cyclereact-nav-right {
+    cursor: e-resize;
+    right: 0;
+    width: 33.333333%;
+  }
+  .thumbnails-disabled .thumbs { display: none !important }
+  .thumbnails-disabled .solofolio-cyclereact-nav-left,
+  .thumbnails-disabled .solofolio-cyclereact-nav-right {
+    width: 50%;
+  }
+  .solofolio-cyclereact-slide { right: 0 }
+  .wrapper .solofolio-cyclereact-caption {
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.4;
+    font-size: .8em;
+  }
+  .solofolio-cyclereact-sidebar {
+    bottom: 0;
+    position: fixed;
+    max-width: 200px;
+    width: 100%;
+    z-index: 100;
+  }
+  .solofolio-cyclereact-thumbs {
+    display: none;
+    z-index: 200;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    margin: 0 !important;
+    max-width: inherit !important;
+    list-style-type: none;
+    overflow-y: auto;
+  }
+  .solofolio-cyclereact-thumbs {
+    max-width: inherit !important;
+  }
+  .solofolio-cyclereact-thumbs .thumb {
+    float: left;
+    padding: 10px 10px 0 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    list-style-type: none;
+  }
+  .solofolio-cyclereact-thumbs .thumb a {
+    height: 200px;
+    display: block;
+    position: relative;
+  }
+  .solofolio-cyclereact-thumbs .thumb a:hover { opacity: .7 }
+  .solofolio-cyclereact-thumbs .thumb img {
+    width: auto;
+    height: 100%;
+  }
+  .solofolio-cyclereact-nav-left {
+    cursor: url('css/cursor-left-32.png'), auto;
+  }
+  .solofolio-cyclereact-nav-thumbs {
+    cursor: url('css/cursor-thumbs-32.png'), auto;
+  }
+  .solofolio-cyclereact-nav-right {
+    cursor: url('css/cursor-right-32.png'), auto;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .wrapper h1,
+  .wrapper h2,
+  .wrapper h3,
+  .wrapper h4,
+  .wrapper h5,
+  .wrapper h6,
+  .entry,
+  .entry .wp-caption,
+  .entry .wp-caption img,
+  .entry img,
+  .content-index,
+  .content-about,
+  .content-parent,
+  .content-about-content,
+  .content-about-image,
+  .post-meta,
+  .entry p,
+  .entry .aligncenter,
+  .tag-links,
+  .comments,
+  .pagination-nav,
+  .solofolio-gallery-title p,
+  .page-template-story-php .wrapper p,
+  .page-template-story-php .wrapper img,
+  .page-template-story-php .wrapper .wp-caption,
+  .vert-scroll img,
+  .vert-scroll .wp-caption-text,
+  .solofolio-cyclereact-slide .wp-caption-text,
+  .solofolio-cyclereact-slide img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .wp-caption img, img.alignnone {
+    width: 100%;
+    height: auto;
+  }
+  .header {
+    position: relative;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    min-width: 320px;
+  }
+  .header .logo { padding-top: 1rem }
+  .page-template-story-php .header { margin-bottom: 0 }
+  .header-meta { max-width: inherit }
+  .header-content { display: none }
+  .header-content ul li a,
+  .header .header-content h3,
+  .menu-icon,
+  .searchform {
+    display: block;
+    line-height: 1.5rem;
+    font-size: 16px;
+    padding: .75rem 1rem;
+    text-align: left;
+  }
+  .site-title { line-height: 1 }
+  .sidebar-widget, .solofolio-custom-menu { margin-top: 0 }
+  .header-meta div {
+    float: none;
+    padding-top : .25em;
+  }
+  .wrapper {
+    margin-top: 0;
+    min-width: 320px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .header-content h3,
+  .menu-icon,
+  .header-content ul li,
+  .searchform,
+  .solofolio-social {
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
+  .header {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+  .solofolio-social a {
+    display: inline-block;
+    line-height: 1.5rem;
+    padding: .75rem 1.25rem;
+  }
+  .menu-icon {
+    display: block;
+    margin-top: 1rem;
+    padding: .75rem 1rem;
+    cursor: pointer;
+    text-align: left;
+  }
+  .menu-icon i {
+    vertical-align: middle;
+    float: right;
+    line-height: inherit;
+  }
+  .solofolio-custom-menu h3:after { float: right }
+  .solofolio-custom-menu li { padding-left: 1rem }
+  .searchform {
+    display: table;
+    width: 100%;
+    padding: .5rem 1rem;
+  }
+  .searchform input, .searchform span {
+    display: table-cell;
+  }
+  .searchform input {
+    border: none;
+    padding: 0;
+    width: 100%;
+  }
+  .searchform span {
+    width: 1px;
+  }
+  .searchform button {
+    border: none;
+    padding-right: 0;
+    text-align: right;
+  }
+  .content-page,
+  .content-index,
+  .content-search,
+  .content-about {
+    max-width: 900px;
+  }
+  .content-about-image,
+  .content-about-content {
+    float: none;
+    width: 100%;
+  }
+  .content-about-image {
+    padding: 0;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .content-about-content {
+    max-width: 600px;
+    display: block;
+  }
+  .content-about .children { padding-left: 1rem }
+  .content-about .children li {
+    padding-left: 0;
+    padding-right: 1rem;
+  }
+  .entry { margin-bottom: 2rem }
+  .post-meta, .entry p {
+    max-width: 600px;
+  }
+  .entry .wp-caption-text {
+    margin: .25em auto auto auto;
+    max-width: none;
+  }
+  .entry p { text-align: left }
+  .comments .commentlist li { padding: 0 }
+  .footer {
+    line-height: 1.4;
+    padding: 1rem;
+  }
+  .footer .copyright-label { display: none }
+  .wrapper .content-index { width: 100% }
+  .pagination-nav h4 { padding: 0 }
+  .wrapper h1 { font-size: 22px }
+  .vert-scroll .wp-caption-text { max-width: none }
+  .solofolio-gallery-title h2 { text-align: center }
+  .solofolio-cyclereact-slide .image {
+    margin: 0 auto;
+  }
+  .solofolio-cyclereact-slide img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+  }
+  .solofolio-cyclereact-slide {
+    visibility: visible !important;
+    position: relative !important;
+    margin: 1rem auto 0;
+  }
+  .solofolio-cyclereact-stage[style] { display: block !important }
+  .solofolio-cyclereact-sidebar[style],
+  .solofolio-cyclereact-thumbs[style] { display: none !important }
+  .solofolio-cyclereact-sidebar, .solofolio-cyclereact-image-nav {
+    display: none;
+  }
+  body .wrapper .solofolio-cyclereact-title {
+    left: auto !important;
+  }
+  .vert-scroll-full {
+    margin: 0 -1rem;
+  }
+  .header, .footer { text-align: center }
+}
+
+@media only screen and (max-width: 620px) {
+  [class*='col-'] {
+    float: none;
+    padding-right: 0;
+    width: 100%;
+  }
+  body.page { overflow: auto }
+  .header-content { text-align: center }
+  .content-page,
+  .content-index,
+  .content-search,
+  .content-parent .content { padding: 0 }
+  .content-parent .children li {
+    padding-right: 0;
+    padding-left: 0;
+    width: 49%;
+  }
+  .content-parent .children li:nth-child(odd) { padding-right: .5rem; }
+  .content-parent .children li:nth-child(even) { padding-left: .5rem; }
+  .single-post .pagination-nav .right, .single-post .pagination-nav .left { float: none }
+  .single-post .pagination-nav .left { margin-bottom: 1rem }
+  .single-post .pagination-nav .right h4 { text-align: left }
+  .entry img { max-width: 100% }
+}
+
+/* Heights Layout */
+@media only screen and (min-width: 1025px) {
+  .centered-content .entry,
+  .centered-content .entry .wp-caption,
+  .centered-content .entry .wp-caption img,
+  .centered-content .entry img,
+  .centered-content .more-link,
+  .centered-content .content-index,
+  .centered-content .content-about,
+  .centered-content .content-parent,
+  .centered-content .content-about-content,
+  .centered-content .content-about-image,
+  .centered-content .post-meta,
+  .centered-content pre,
+  .centered-content table,
+  .centered-content address,
+  .centered-content dl,
+  .centered-content ol,
+  .centered-content ul,
+  .centered-content h1,
+  .centered-content h2,
+  .centered-content h3,
+  .centered-content h4,
+  .centered-content h5,
+  .centered-content h6,
+  .centered-content p,
+  .centered-content .content-page img,
+  .centered-content .entry .aligncenter,
+  .centered-content .tag-links,
+  .centered-content .comments,
+  .centered-content .pagination-nav,
+  .centered-content .solofolio-gallery-title p,
+  .centered-content.page-template-story-php .wrapper p,
+  .centered-content.page-template-story-php .wrapper img,
+  .centered-content.page-template-story-php .wrapper .wp-caption,
+  .centered-content .vert-scroll img,
+  .centered-content .vert-scroll .wp-caption-text  {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .centered-content iframe { margin: 0 auto 1rem auto !important }
+  .heights .header-meta { margin-bottom: 1em }
+  .heights .header { height: 100% }
+  .heights .header-inner {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    bottom: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .heights .header-content ul li a { line-height: 1.6 }
+
+  /* Story Template */
+  .heights.page-template-story-php .menu-btn {
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    left: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 0 1rem;
+    position: fixed;
+    top: 0;
+    line-height: 40px;
+    z-index: 9997;
+    -ms-transform:rotate(90deg); /* IE 9 */
+    -ms-transform-origin: 0;
+    -moz-transform:rotate(90deg); /* Firefox */
+    -moz-transform-origin: 0;
+    -webkit-transform:rotate(90deg); /* Safari and Chrome */
+    -webkit-transform-origin: 0;
+    -o-transform:rotate(90deg); /* Opera */
+    -o-transform-origin: 0;
+    transform-origin: 0;
+  }
+  .heights.page-template-story-php .wrapper {
+    top: 0;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0;
+  }
+  .heights.page-template-story-php .pushy {
+    position: fixed;
+    height: 100%;
+    top: 0;
+    z-index: 9999;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
+  }
+  .heights.page-template-story-php .pushy-open { left: 0 }
+  .heights.page-template-story-php .site-overlay { display: none }
+  .heights.page-template-story-php.pushy-active .menu-btn { display: none }
+  .heights.page-template-story-php.pushy-active .site-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9998;
+    background-color: rgba(0,0,0,0.5);
+  }
+  .heights.page-template-story-php.pushy-active { overflow-x: hidden }
+  .heights .solofolio-cyclereact-slide .image {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .heights.page-template-story-php .solofolio-cyclereact-sidebar { left: 1rem }
+  .heights.page-template-story-php .solofolio-cyclereact-sidebar { bottom: 1rem }
+  .heights.page-template-story-php .solofolio-cyclereact-stage {
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
+
+/* Horizon Layout */
+@media only screen and (min-width: 1025px) {
+  .horizon .entry,
+  .horizon .entry .wp-caption,
+  .horizon .entry .wp-caption img,
+  .horizon .entry img,
+  .horizon .content-index,
+  .horizon .content-about,
+  .horizon .content-parent,
+  .horizon .content-about-content,
+  .horizon .content-about-image,
+  .horizon .post-meta,
+  .horizon .entry p,
+  .horizon .entry .aligncenter,
+  .horizon .tag-links,
+  .horizon .comments,
+  .horizon .pagination-nav,
+  .horizon .solofolio-gallery-title p,
+  .horizon.page-template-story-php .wrapper p,
+  .horizon.page-template-story-php .wrapper img,
+  .horizon.page-template-story-php .wrapper .wp-caption,
+  .horizon .vert-scroll img,
+  .horizon .vert-scroll .wp-caption-text  {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .horizon .wrapper { top: 85px }
+  .horizon .header {
+    display: table;
+    position: fixed;
+    left: 0;
+    right: 0;
+    padding: .75rem 0;
+    width: 100%;
+    z-index: 300;
+  }
+  .horizon .logo {
+    display: table-cell;
+    padding: 0 1.5rem 0 40px;
+  }
+  .horizon .logo-text a { vertical-align: text-top }
+  .horizon .header-inner { display: table-row }
+  .horizon .header-meta { display: table-cell }
+  .horizon .header-meta div {
+    display: inline-block;
+    padding: 0 .5rem;
+  }
+  .horizon .header-content {
+    display: table-cell;
+    padding-right: 40px;
+    text-align: right;
+  }
+  .horizon .logo, .horizon .header-meta, .horizon .header-content { vertical-align: middle }
+  .horizon .sidebar-widget { margin-left: 1rem }
+  .horizon .sidebar-widget { margin: 0 }
+  .horizon .header-content ul li {
+    display: inline-block;
+    padding: 0 10px;
+  }
+  .horizon .solofolio-custom-menu,
+  .horizon .sidebar-widget {
+    display: inline-block;
+  }
+  .horizon .solofolio-custom-menu {
+    position: relative;
+    margin-top: 0;
+    padding: 0 10px;
+  }
+  .horizon .header-content h3 { display: none }
+  .horizon .header-content .solofolio-custom-menu h3 { display: block }
+  .horizon .header-content .solofolio-custom-menu ul {
+    padding-top: .75rem;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 999;
+  }
+  .horizon .header-content .solofolio-custom-menu li {
+    display: block;
+    margin: .75rem 0;
+    text-align: left;
+    width: 10rem;
+  }
+  .horizon .content-about-image {
+    float: left;
+    padding: 0 2rem 2rem 0;
+  }
+  .horizon .comments,
+  .horizon .pagination-nav {
+    max-width: 600px;
+  }
+  .horizon .solofolio-cyclereact-thumbs { text-align: center }
+  .horizon .solofolio-cyclereact-thumbs .thumb {
+    display: inline-block;
+    float: none;
+  }
+  .horizon .solofolio-cyclereact-sidebar {
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+  .horizon .solofolio-cyclereact-sidebar.text li,
+  .horizon .solofolio-cyclereact-sidebar.buttons a { margin-top: 0 }
+  .horizon .solofolio-cyclereact-sidebar.text a { margin-bottom: .5rem }
+  .horizon .solofolio-cyclereact-sidebar.buttons a { margin-bottom: 15px }
+  .horizon .solofolio-cyclereact-caption {
+    line-height: 1.4;
+    margin-top: 55px;
+  }
+  .horizon .solofolio-cyclereact-sidebar.text .solofolio-cyclereact-caption { margin-top: 2rem }
+  .horizon .solofolio-cyclereact-controls {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+

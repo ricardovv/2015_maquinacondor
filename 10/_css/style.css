@@ -1,0 +1,256 @@
+/* body - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+/* wrap  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+#wrap {
+/*  background-image: url('../_img/img2.jpg');*/
+/*background-image: url('https://media.giphy.com/media/xTiTnETmpPnreri35u/giphy.gif');*/  
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px; 
+  display: table; /* para centrar cela interior del texto */
+  font-family: 'Open Sans', sans-serif;
+ }
+/* wrap cierra - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+
+/* poema  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+#poemacaja {
+  height: auto;
+  width: 95%;
+  margin: 10%  auto auto 0%;
+}
+#poema {
+  vertical-align: middle;
+  font-size: 48px;
+  text-align: center;
+  color: yellow;
+}
+#poema p , #valor{
+/*  background-color: white;*/
+  letter-spacing: -2px;
+  text-align:center;
+  padding: 4px 6px 4px 6px;
+  margin: 5px;
+  line-height: 120%;
+}
+#poema a{
+  color: darkred;
+}
+#poema a:hover {
+  color: red; 
+}
+/* poema cierre - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+
+/* header cosas - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+#header {
+  width: 100%;
+  height: 40px;
+  background-color: ;
+  padding: 0px;
+  margin: 0px;
+}
+#header h1 {
+  width: auto;
+  height: auto;
+  background: rgba(255, 255, 255, .5);
+  padding: 2px 8px 3px 8px;
+  margin: 0px;
+  position: fixed;
+  top: 5px;
+  right: 5;
+  font-size: 14px;
+  font-weight: normal;
+  color: black;
+ }
+#navtop {
+  width: 130px;
+  height: auto;
+  position: fixed;
+  top: 32px;
+  right: 5;
+  background: rgba(255, 255, 255, .5);
+  padding: 2px 4px 4px 4px;
+  margin: 0px;
+  font-size: 13px;
+  color: brown;
+  letter-spacing: 1.0px;
+  text-align: center;
+  text-decoration: none;
+ }
+#header a {
+  padding: 2px 4px 3px 4px;
+  }
+#header a:hover {
+  background-color: red;
+  color: white;
+   padding: 2px 8px 4px 8px;
+ }
+/* cierre header cosas - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+
+/*popups - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.headerSobre {
+  width:80%; /*para mantener en centro, ajustar con bottom y right*/
+  top: 8%; /*dividir de lo que sobra a w y h*/
+  right: 10%;
+  position: fixed;
+  display:none; 
+  padding:12px; 
+  background: brown; 
+  font-size: 13px;
+  text-align: left; 
+  line-height: 125%;
+}
+.headerSobre h2{
+  padding: 0px;
+  margin: 4px 0px;
+  font-size: 16px;
+  text-align: left; 
+  color: white;
+  letter-spacing: 1.0px;
+}
+.headerSobre p{
+  color: black;
+  letter-spacing: 0.2px;
+  text-indent: 30px ;
+}
+.headerSobre b {
+  color: white;
+  font-weight: normal;
+ }
+.button {
+  margin: 0px; 
+  padding:4px;
+  background-color: black;
+  border: 0px solid #666;
+  color:#000;
+  text-decoration:none;
+  font-size: 12px;
+  color: brown;
+}
+/* cierre popups del header - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+
+/* contador segundos pie pagina - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+#counterPoema {
+  position: fixed;
+  bottom: 0px;
+	left: 0px;
+	right: 0px;
+  padding:0px;  
+	background: rgba(255, 255, 255, .3); 
+  font-size: 11px;
+  font-weight: normal;
+  text-align: center;
+  color:  black;
+  letter-spacing: -0.1px;
+}
+#counterPoema p {  
+ height:20px; 
+width: 780px;
+ margin: auto;
+  background: white; 
+  padding: 4px 0px 4px 0px;
+  font-weight: bold;
+}
+
+#outputTiempo {  
+  padding: 0px 2px 0px 2px;
+  font-weight: bold;
+  color: brown;
+}
+
+
+#nombreAdiv, #palabra1Div, #palabra2Div {
+  color:black;
+}
+#monedas {
+  color: grey;
+  font-size: 14px;
+}
+
+/* detalle tooltip - - - - - - - - - - - - - - - - - - - */
+/* Easy CSS Tooltip - by Koller Juergen [www.kollermedia.at] */
+/* {font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; }*/
+/*a.tooltip {
+  background:moccasin; 
+  padding:1px 2px; 
+  text-decoration:none;
+  }  
+a.tooltip:hover {
+  background:yellow; 
+  color:red; 
+  padding:1px 2px; 
+  text-decoration:none;
+  }  
+a.tooltip span {
+  display:none; 
+  margin-top:-122px; 
+  font-size: 12px; 
+}
+a.tooltip:hover span {
+  display:inline;
+  padding: 1px 2px;  
+  color: brown;
+  position:absolute; 
+  background-image: url("../_img/flecha.png");
+}
+#valorPeriodico {
+  color: yellow;
+  font-family: 'EB Garamond', serif;
+  font-size: 13px;
+}*/
+
+
+/* detalle tooltip - - - - - - - - - - - - - - - - - - - 
+
+
+
+
+@media only screen and (min-width: 400px) {
+    body {
+        background: white;
+    }
+  #wrap {
+    width: 100%;
+    margin-left: 0px;
+  }
+  #wrap p {
+    font-family: 'Oswald', sans-serif;
+    color: grey;
+    font-size: 12px;
+    letter-spacing: 1.4px;
+  }
+  #poema a{
+    color: orange;
+  }
+  #poema p {
+    font-family: 'IM Fell DW Pica SC', serif;
+  font-family: 'Open Sans', sans-serif;  
+    color: white;
+    font-size: 24px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    padding: 0px;
+  }
+} 
+
+*/

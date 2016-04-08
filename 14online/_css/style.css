@@ -1,0 +1,364 @@
+/* body - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+
+}
+/* salir  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+#salir, #salir a {
+  width: 100%;
+  height: 15px;
+  background-color: black;
+	color: white;
+  padding: 0px;
+  margin: 0px;
+  text-align:center; 
+  font-family: 'Open Sans', sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+ }
+/* salir cierra - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+/* wrap  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+#wrap {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px; 
+  display: table; /* para centrar cela interior del texto */
+  font-family: 'Open Sans', sans-serif;
+ }
+/* wrap cierra - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+
+/* poema  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+#poemacaja {
+  height: auto;
+  width: 95%;
+  margin: 5%  auto auto 0%;
+}
+#poema {
+  vertical-align: middle;
+  font-size: 48px;
+  text-align: center;
+color: black;
+}
+#poema p , #valor{
+  letter-spacing: -2px;
+  text-align:center;
+  padding: 4px 6px 4px 6px;
+  margin: 5px;
+  line-height: 120%;
+}
+#poema a{
+  color: orangered;
+}
+#poema a:hover {
+  color: red; 
+}
+
+/* poema cierre - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+
+/* header cosas - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+#header {
+  width: 100%;
+  height: 40px;
+  background-color: ;
+  padding: 0px;
+  margin: 0px;
+}
+#header h1 {
+  width: auto;
+  height: auto;
+  background: rgba(255, 255, 255, .5);
+  padding: 2px 8px 3px 8px;
+  margin: 0px;
+  position: fixed;
+  top: 20px;
+  right: 5;
+  font-size: 14px;
+  font-weight: normal;
+  color: black;
+ }
+#navtop {
+  width: 130px;
+  height: auto;
+  position: fixed;
+  top: 52px;
+  right: 5;
+  background: rgba(255, 255, 255, .5);
+  padding: 2px 2px 3px 2px;
+  margin: 0px;
+  font-size: 13px;
+  color: orangered;
+  letter-spacing: 1.0px;
+  text-align: center;
+  text-decoration: none;
+ }
+#header a {
+  padding: 2px 4px 3px 4px;
+  margin: 0px;
+  }
+#header a:hover {
+  background-color: red;
+  color: white;
+  padding: 2px 4px 3px 4px;
+  margin: 0px;
+ }
+ 
+/* cierre header cosas - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+
+/*popups - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.headerSobre {
+  width:80%; /*para mantener en centro, ajustar con bottom y right*/
+  top: 6%; /*dividir de lo que sobra a w y h*/
+  right: 10%;
+  position: fixed;
+  display:none; 
+  padding:12px; 
+  background: brown; 
+  font-size: 12px;
+  text-align: left; 
+  line-height: 120%;
+}
+.headerSobre h2{
+  padding: 0px;
+  margin: 2px 0px;
+  font-size: 14px;
+  text-align: left; 
+  color: white;
+  letter-spacing: 1.0px;
+}
+.headerSobre p{
+  color: black;
+  letter-spacing: 0.1px;
+  text-indent: 25px;
+  padding: 0px;
+}
+.headerSobre b {
+  color: white;
+  font-weight: normal;
+ }
+.button {
+  margin: 0px; 
+  padding:4px;
+  background-color: black;
+  border: 0px solid #666;
+  color:#000;
+  text-decoration:none;
+  font-size: 12px;
+  color: brown;
+}
+/* cierre popups del header - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+
+/* contador segundos pie pagina - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+#counterPoema {
+  position: fixed;
+  bottom: 0px;
+	left: 0px;
+	right: 0px;
+  padding:0px;  
+	background: none; 
+  font-size: 11px;
+  font-weight: normal;
+  text-align: center;
+  color:  black;
+  letter-spacing: -0.2px;
+}
+#counterPoema p {  
+ height:18px; 
+width: 830px;
+ margin: auto;
+background: rgba(255, 255, 255, .7); 
+  padding: 3px 0px 2px 0px;
+}
+#counterPoema b {
+  color: orangered;
+}
+
+#outputTiempo {  
+  padding: 0px 2px 0px 2px;
+  font-weight: bold;
+  color: orangered;
+}
+#nombreAdiv, #palabra1Div, #palabra2Div {
+  color:black;
+}
+#monedas {
+background: white;
+  color: black;
+  font-size: 14px;
+}
+
+
+/* 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+MEDIA 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+*/ 
+
+@media only screen and (min-width: 300px) {
+
+    body {
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    /* salir  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    #salir, #salir a {
+      height: 40px;
+      background-color: brown;
+      font-size: 30px;
+      font-weight: normal;
+    }
+    /* salir cierra - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+    /* poema  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    #poemacaja {
+      height: auto;
+      width: 95%;
+      margin: 5%  auto auto 0%;
+    }
+    #poema {
+      vertical-align: middle;
+      font-size: 48px;
+      text-align: center;
+    color: black;
+    }
+    #poema p , #valor{
+      letter-spacing: -2px;
+      text-align:center;
+      padding: 4px 6px 4px 6px;
+      margin: 5px;
+      line-height: 120%;
+    }
+    #poema a{
+      color: orangered;
+    }
+    #poema a:hover {
+      color: red; 
+    }
+    /* poema cierre - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+    /* poema  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    #poemacaja {
+      width: 99%;
+      margin: 30%  auto auto 0%;
+    }
+    #poema {
+      font-size: 44px;
+    }
+    #poema p , #valor{
+      padding: 5px 2px 5px 2px;
+      margin: 2px;
+      line-height: 120%;
+    }
+    /* poema cierre - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+    /* header cosas - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    #header h1 {
+      background: rgba(255, 255, 255, .7);
+      padding: 2px 4px 3px 4px;
+      margin: 0px;
+      position: fixed;
+      top: 50px;
+      left: 5;
+      width: 500px;
+      font-size: 30px;
+      font-weight: normal;
+     }
+    #navtop {
+      width: auto;
+      top: 50px;
+      background: rgba(255, 255, 255, .7);
+      padding: 2px 5px 3px 5px;
+      margin: 0px;
+      font-size: 30px;
+      color: orangered;
+     }
+    #header a {
+      padding: 2px 5px 3px 5px;
+      }
+    #header a:hover {
+      background-color: red;
+      color: white;
+      padding: 2px 4px 3px 4px;
+      margin: 0px;
+     }
+    /* cierre header cosas - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    
+    /*popups - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    .headerSobre {
+      width:96%; /*para mantener en centro, ajustar con bottom y right*/
+      top: 100px; /*dividir de lo que sobra a w y h*/
+      left: 5px;
+      padding:5px; 
+      background: brown; 
+      font-size: 25px;
+      text-align: left; 
+      line-height: 100%;
+    }
+    .headerSobre h2 {
+      padding: 0px;
+      margin: 0px 0px;
+      font-size: 25px;
+      text-align: left; 
+      color: white;
+      letter-spacing: 1.0px;
+    }
+    .headerSobre p{
+      letter-spacing: -0.2px;
+      text-indent: 15px;
+    }
+    .headerSobre b {
+      color: white;
+      font-weight: normal;
+     }
+    .button {
+      background-color: black;
+      text-decoration:none;
+      font-size: 20px;
+      color: white;
+    }
+    /* cierre popups del header - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+/* contador segundos pie pagina - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    #counterPoema {
+      padding:0px;  
+      font-size: 22px;
+    }
+    #counterPoema p {  
+     height:60px; 
+      width:100%;
+      padding: 1px 0px 2px 0px;
+    }
+    #nombreAdiv, #palabra1Div, #palabra2Div {
+      color:black;
+    }
+  
+
+
+} 
+

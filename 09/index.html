@@ -25,49 +25,55 @@
 <body>
 
   <div id="wrap">
+<!-- dejar para que se abran los popups
+ --><div id="cajaOverlay" onclick="cerrar()"> </div>
+
 
     <div id="header"> 
       <H1>Máquina Condor | Demian Schopf</H1>
-
       <div id="navtop">
-          <a id="sobreobra" class="tooltipHeader"><span> <b>Máquina Cóndor</b> es un generador de textos constituido por varios motores de búsqueda y un ‘motor de escritura’. Ahí convergen cuatro variables:<br> 
-          A): datos entregados por un motor de búsqueda que examina permanentemente las actualizaciones del periódico The New York Times. Ahí se rankean 369 palabras clave relacionadas con la guerra y la economía.<br>
-          B): los valores de compra y venta de cinco divisas las unas en relación a las otras: del dólar estadounidense respecto al dólar canadiense, del franco suizo al euro o al yen, etc.; además del valor de compra y venta de una materia prima: el oro. <br>
-          C): nombres de personas asesinadas por drones que se insertan automáticamente en los versos generados por la máquina. <br>
-          D): un motor de escritura que opera con una estrofa del soneto De la Ambición Humana (1623) –de Luís de Góngora (1561-1627)–  donde se insertan dinámicamente palabras del léxico de la anatomía.<br><br> 
-          Esas palabras están hipervinculadas y conducen a páginas donde pueden verse: 1): los datos de las dos primeras variables (A y B) y 2): páginas donde se publican los decesos por ataques de drones (C). Conjugadas en la estrofa las palabras remiten a imágenes asociables a: i)– una disección a secas, ii)– una autopsia por muerte por envenenamiento, iii)– una necropsia por fallecimiento por esterilización y iv)– variaciones en torno al motivo del verso utilizado –incluyendo sus palabras originales– que es un memento mori y una vanitas. En los términos confluyen, a veces, la arquitectura y la anatomía ( ‘bóveda y ‘nervadura’) o la geografía y la anatomía (‘cuenca’, ‘fosa’). Las coyunturas son más de dos. No puedo enumerarlas todas. Abundan citas a otros autores; pueden ser literales o tergiversaciones: ‘tala’ en el primer caso (Gabriela Mistral) o ‘llagar’ y ‘nínfulo’ (Mistral y Nabokov respectivamente).<br>
-          La coyuntura entre el orden de las 369 palabras en el ranking y las relaciones de compra y venta de las divisas decide qué palabra se instala en qué verso. Los nombres de los muertos se agregan en secuencia. No existe el azar en Máquina Cóndor. Todo es causal. Podemos imaginarla como una especie de termómetro muy exacto, como un memorial vivo o como una estructura relacional en base a nodos que están siendo modificando permanentemente por la contingencia. Ahí todo responde a relaciones de causa y efecto donde se conjugan, de-nuevo, guerra y economía bíos y logos.<br><br><br> 
-          </span> 
-          info</a>
-          | 
-         <a id="sobreartista" class="tooltipHeader">
-          <span> <b>Demian Schopf</b> nace en 1975 en Frankfurt am Main, Alemania. Es licenciado en Bellas Artes por la Universidad Arcis, Magíster en Artes por la Universidad de Chile y Doctor en Filosofía con mención en Estética y Teoría del Arte en la misma casa de estudios. Fue becario de CONICYT entre 2008 y 2012 (con Beca para Estudios de Doctorado en Chile). Obtuvo la Beca FONDART en nueve oportunidades, la beca del Servicio de Intercambio Académico Alemán --DAAD-- en dos (para realizar estudios en la Kunsthochschule für Medien en Colonia, Alemania; en los seminarios de Siegfried Zielinski y Jürgen Klauke).<br> 
-          Además, obtuvo una beca de Creación e Investigación Artística de la Fundación Andes (2005) y una beca de la Fundación Amigos del Arte (2006). En 2007 obtuvo el premio ALTAZOR por su obra “Máquina Cóndor”, y en 2009 uno de los premios Vida 12.0 en Madrid, otorgado por la Fundación Telefónica (por su obra “Máquina de Coser”).<br><br> 
-          En 2013 realizó una residencia en el Zentrum Für Kunst und Medientechnologie (ZKM) en Karlsruhe, Alemania. Ha expuesto sus obras en 12 exposiciones individuales en museos y galerías en Chile, Alemania, Italia, Argentina y Paraguay. Destacan: "Máquina Cóndor" (2006), Galería Gabriela Mistral, Santiago, "Los Coros Menores" (2011), Museo de Arte Contemporáneo, Santiago, “los Tíos del Diablo” (2013), Galería Patricia Ready, Santiago y "La Revolución Silenciosa" (2002) Centro Cultural de España en Buenos Aires (ICI) y en el Museo del Barro, Asunción, Paraguay y “La Nave” en 2015 en el Museo Nacional de Bellas Artes en Santiago de Chile.<br><br> 
-          Ha participado en más de 40 exposiciones colectivas en galerías, museos y bienales en Alemania, Suecia, Italia, Suiza, España, Estados Unidos, Nueva Zelanda, Brasil, Argentina, Colombia, Chile, Perú y Egipto. Destacan: III Bienal del Mercosur (2002), así como muestras en el Spazio Oberdan (Milán, 2009), Kunstraum Kreuzberg / Bethanien (Berlín, 2012), el Instituto Cervantes de Nueva York (Nueva York, 2015), el Immigration Museum (Melbourne, 2015) y la National Gallery (Auckland, 2016).<br><br><br>
-        </span> artista </a>
-      </div><!--ciwrre navtop-->
+        <a class="tooltipHeader" onclick="mostrar(1)">info</a>  |  <a class="tooltipHeader" onclick="mostrar(2)">artista </a>
+      </div><!--cierre navtop--> 
+    </div><!-- cierre header -->
 
-  
+    <div id="sobreobra" class="headerSobre">
+      <H2>Sobre la Obra</H2>
+        <p>
+        <b>Máquina Cóndor</b> Máquina Cóndor es un generador de textos constituido por varios motores de búsqueda y un ‘motor de escritura’. Ahí convergen cuatro variables: <br>
+        A): datos entregados por un motor de búsqueda que examina permanentemente las actualizaciones del periódico The New York Times. Ahí se rankean 369 palabras clave relacionadas con la guerra y la economía.<br> 
+        B): los valores de compra y venta de una selección de divisas relacionadas con países en donde hay guerras por motivos económicos, por ejemplo: del Dólar estadounidense respecto al Dinar iraquí, del Euro en relación a la Libra siria, etc.<br> 
+        C): nombres de personas asesinadas por drones que se insertan automáticamente en los versos generados por la máquina y que se obtienen de la página http://drones.pitchinteractive.com/<br> 
+        D): un motor de escritura que opera con una estrofa del soneto De la Ambición Humana (1623) –de Luís de Góngora (1561-1627)– donde se insertan dinámicamente palabras del léxico de la anatomía. Esas palabras están hipervinculadas y conducen a páginas donde pueden verse: 1): los datos de las dos primeras variables (A y B) y 2): páginas donde se publican los decesos por ataques de drones (C). Conjugadas en la estrofa las palabras remiten a imágenes asociables a: i)– una disección a secas, ii)– una autopsia por muerte por envenenamiento, iii)– una necropsia por fallecimiento por esterilización y iv)– variaciones en torno al motivo del verso utilizado –incluyendo sus palabras originales– que es un memento mori y una vanitas. En los términos confluyen, a veces, la arquitectura y la anatomía ( ‘bóveda y ‘nervadura’) o la geografía y la anatomía (‘cuenca’, ‘fosa’).<br> 
+        Las coyunturas son más de dos. No puedo enumerarlas todas. Abundan citas a otros autores; pueden ser literales o tergiversaciones: ‘tala’ en el primer caso (Gabriela Mistral) o ‘llagar’ y ‘nínfulo’ (Mistral y Nabokov respectivamente). La coyuntura entre el orden de las 369 palabras en el ranking y las relaciones de compra y venta de las divisas decide qué palabra se instala en qué verso. Los nombres de los muertos se agregan en secuencia. No existe el azar en Máquina Cóndor. Todo es causal. Podemos imaginarla como una especie de termómetro muy exacto, como un memorial vivo o como una estructura relacional en base a nodos que están siendo modificando permanentemente por la contingencia. Ahí todo responde a relaciones de causa y efecto donde se conjugan, de-nuevo, guerra y economía, tortura y medicina, y bíos y logos.<br><br>
+        </p>
+        <button class="button" onclick="cerrar()">Cerrar</button>
+    </div><!-- cierre sobre obra -->
 
-    </div>
+    <div id="sobreartista" class="headerSobre"> 
+        <H2>Sobre el Artista</H2>
+        <p>              
+        <b>Demian Schopf</b> nace en 1975 en Frankfurt am Main, Alemania. Es licenciado en Bellas Artes por la Universidad Arcis, Magíster en Artes por la Universidad de Chile y Doctor en Filosofía con mención en Estética y Teoría del Arte en la misma casa de estudios. Fue becario de CONICYT entre 2008 y 2012 (con Beca para Estudios de Doctorado en Chile). Obtuvo la Beca FONDART en nueve oportunidades, la beca del Servicio de Intercambio Académico Alemán --DAAD-- en dos (para realizar estudios en la Kunsthochschule für Medien en Colonia, Alemania; en los seminarios de Siegfried Zielinski y Jürgen Klauke).<br> 
+        Además, obtuvo una beca de Creación e Investigación Artística de la Fundación Andes (2005) y una beca de la Fundación Amigos del Arte (2006). En 2007 obtuvo el premio ALTAZOR por su obra “Máquina Cóndor”, y en 2009 uno de los premios Vida 12.0 en Madrid, otorgado por la Fundación Telefónica (por su obra “Máquina de Coser”).<br><br> 
+        En 2013 realizó una residencia en el Zentrum Für Kunst und Medientechnologie (ZKM) en Karlsruhe, Alemania. Ha expuesto sus obras en 12 exposiciones individuales en museos y galerías en Chile, Alemania, Italia, Argentina y Paraguay. Destacan: "Máquina Cóndor" (2006), Galería Gabriela Mistral, Santiago, "Los Coros Menores" (2011), Museo de Arte Contemporáneo, Santiago, “los Tíos del Diablo” (2013), Galería Patricia Ready, Santiago y "La Revolución Silenciosa" (2002) Centro Cultural de España en Buenos Aires (ICI) y en el Museo del Barro, Asunción, Paraguay y “La Nave” en 2015 en el Museo Nacional de Bellas Artes en Santiago de Chile.<br><br> 
+        Ha participado en más de 40 exposiciones colectivas en galerías, museos y bienales en Alemania, Suecia, Italia, Suiza, España, Estados Unidos, Nueva Zelanda, Brasil, Argentina, Colombia, Chile, Perú y Egipto. Destacan: III Bienal del Mercosur (2002), así como muestras en el Spazio Oberdan (Milán, 2009), Kunstraum Kreuzberg / Bethanien (Berlín, 2012), el Instituto Cervantes de Nueva York (Nueva York, 2015), el Immigration Museum (Melbourne, 2015) y la National Gallery (Auckland, 2016).<br><br>
+        </p>
+        <button class="button" onclick="cerrar()">Cerrar</button>
+    </div><!-- cierre sobre artista -->
 
     
     <div id="poemacaja">
-
 <!-- <a href="" id="envia" onclick="abreVentana()"> | PARA PASAR VALOR | </a>   
  -->
-
-        <div id="poema">
-          <p> <a id="palabra1Div" onclick="abreVentana(1)">1Mariposa</a>, no sólo no <a id="palabra2Div" onclick="abreVentana(2)">2cobarde</a> </p>   
-          <p> mas <a id="nombreADiv">Nombre01</a>, <a id="palabra3Div" onclick="abreVentana(3)">3temeraria</a>, <a id="palabra4Div" onclick="abreVentana(4)">4fatalmente</a> <a id="palabra5Div" onclick="abreVentana(5)">5ciega,</a></p>
-          <p> lo que la <a id="palabra6Div" onclick="abreVentana(6)">6llama</a> al <a id="palabra7Div" onclick="abreVentana(7)">7Fénix</a> aún le niega</p>
-          <p> quiere <a id="palabra8Div" onclick="abreVentana(8)">8obstinada</a> que a sus <a id="palabra9Div" onclick="abreVentana(9)">9alas</a> guarde,</p>
-       </div> <!--poemacaja -->
+    <div id="poema">
+        <p> <a id="palabra1Div" onclick="abreVentana(1)">1Mariposa</a>, no sólo no <a id="palabra2Div" onclick="abreVentana(2)">2cobarde</a> </p>   
+        <p> mas <a id="nombreADiv">Nombre01</a>, <a id="palabra3Div" onclick="abreVentana(3)">3temeraria</a>, <a id="palabra4Div" onclick="abreVentana(4)">4fatalmente</a> <a id="palabra5Div" onclick="abreVentana(5)">5ciega,</a></p>
+        <p> lo que la <a id="palabra6Div" onclick="abreVentana(6)">6llama</a> al <a id="palabra7Div" onclick="abreVentana(7)">7Fénix</a> aún le niega</p>
+        <p> quiere <a id="palabra8Div" onclick="abreVentana(8)">8obstinada</a> que a sus <a id="palabra9Div" onclick="abreVentana(9)">9alas</a> guarde,</p>
+     </div> <!--poemacaja -->
  
 <!--       <div id="valorPeriodico">ValorPeriodico</div> 
-<div id="valorMoneda1">valorMoneda1</div>
 -->
+<div id="valorMoneda1">valorMoneda1</div>
       <div id="monedas">
         PRUEBA CARGA MONEDAS 
         <div id="moneda0" >Moneda0</div>
@@ -83,17 +89,16 @@
         <div >- - - - - - - - - - - - - - - - - - </div>  
         <div id ="monedaSuma" >SUMA TODO</div>  
         <div id ="numero" >numero</div> 
-        
       </div>
       <!--  cierre monedas-->
-
     </div>
     <!--  cierre poemacaja-->
 
-<!--         <div id="creditospoema">
-          <p>Primera estrofa del soneto "De La Ambición Humama" (1623), Luís de Góngora (1561-1627)</p>
-        </div>
- -->
+        <div id="counterPoema">
+          <p>Dentro de <a id="outputTiempo">x </a> segundos Máquina Condor generará un nuevo poema. Para conocer las razones haga click sobre alguna de las palabras.</p>
+        
+      </div>
+
 
   </div>
 

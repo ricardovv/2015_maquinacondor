@@ -1,0 +1,45 @@
+body{
+  background-size:   cover;
+  background-repeat: no-repeat;
+  padding:        0px;
+  margin:        0px;
+  font-family: 'Open Sans', sans-serif;
+font-size:      10px;
+}
+a {
+  text-decoration: none;
+
+}
+#textopopup {
+  height:            100%;
+  width:             100%;
+  background-size:   cover;
+  background-repeat: no-repeat;
+
+  padding:           0px;
+  display: table; /* para centrar cela interior del texto */
+}
+#textopopup p {  
+  background-color: transparent;
+  padding:        0px;
+  margin:        0px;
+  font-size:      2.2em;
+  font-weight:    normal;
+  text-align: center;
+  color:          black;
+  letter-spacing: -0.1px;
+  line-height:    120%;
+  vertical-align: middle;
+}
+#textopopup a {
+  color: orangered;
+}
+#texto {
+    position: fixed;
+    top: initial;
+    right: 0%;
+    left: 0%;
+  }
+#parrafo { /*estilo para que aparezca parrafo de texto */
+    display: block;
+}

@@ -1,0 +1,42 @@
+body{
+  padding:        0px;
+  margin:        0px;
+  font-family: 'Open Sans', sans-serif;
+}
+a {
+  text-decoration: none;
+
+}
+#textopopup {
+  height:            100%;
+  width:             100%;
+  background-repeat: no-repeat;
+  background-size:   cover;
+  padding:           0px;
+  display: table; /* para centrar cela interior del texto */
+}
+#textopopup p {  
+  background-color: transparent;
+  padding:        0px;
+  margin:        0px;
+  font-size:      18px;
+  font-weight:    normal;
+  text-align: center;
+  color:          black;
+  letter-spacing: -0.1px;
+  line-height:    120%;
+  vertical-align: middle;
+}
+#textopopup a {
+  color: red;
+}
+#texto {
+    position: fixed;
+    bottom: 20px;
+    right: 0%;
+    left: 0%;
+  }
+#parrafo { /*estilo para que aparezca parrafo de texto */
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+}

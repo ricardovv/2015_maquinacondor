@@ -1,0 +1,241 @@
+
+/* body - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif;
+	font-size: 10px;
+	font-weight: 400;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+a {
+  text-decoration: none;
+}
+/* salir  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+#salir, #salir a {
+  width: 100%;
+  height: auto;
+  background-color: black;
+	color: white;
+  padding: 0px;
+  margin: 0px;
+  text-align:center; 
+	font-size: 1.1em;
+  letter-spacing: .2em;	
+ }
+/* salir cierra - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+/* wrap  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+#wrap {
+/*  background-image: url('../_img/img2.jpg');*/
+/*background-image: url('https://media.giphy.com/media/xTiTnETmpPnreri35u/giphy.gif');*/  
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px; 
+  display: table; /* para centrar cela interior del texto */
+  }
+/* wrap cierra - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+/* header cosas - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+#header {
+  width: 100%;
+  height: 38px;
+  padding: 0px;
+  margin: 0px;
+}
+#header h1 {
+  width: auto;
+  height: auto;
+  position: fixed;
+  top: 18px;
+  left: 5;
+  background: rgba(255, 255, 255, .6);
+  padding: 0px 5px 0px 5px;
+  margin: 0px;
+  font-size: 1.6em;
+  letter-spacing: .1em;
+  color: black;
+ }
+ #header a {
+  padding: 2px 4px 3px 4px;
+  margin: 0px;
+  }
+#header a:hover {
+  padding: 2px 4px 3px 4px;
+  margin: 0px;
+  background-color: red;
+  color: white;
+ }
+#navtop {
+  width: auto;
+  height: auto;
+  position: fixed;
+  top: 18px;
+  right: 5;
+  padding: 2px 2px 3px 2px;
+  margin: 0px;
+  background: rgba(255, 255, 255, .6);
+  font-size: 1.4em;
+  color: orangered;
+  letter-spacing: .2em;
+  text-align: center;
+  text-decoration: none;
+ } 
+/* cierre header cosas - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+/* poema  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+#poemacaja {
+  height: auto;
+  width: 100%;
+  margin: 25%  auto auto 0;
+}
+#poema {
+  font-size: 4.2em;
+  text-align: center;
+	color: black;
+}
+#poema p , #valor{
+  letter-spacing: -.01em;
+  text-align:center;
+  padding: 4px 6px 4px 6px;
+  margin: 5px;
+  line-height: 1.2em;
+}
+#poema a{
+  color: orangered;
+}
+#poema a:hover {
+  color: red; 
+}
+/* poema cierre - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+
+/* cajas - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.headerSobre {
+  position: fixed;
+  top: 40px; /*dividir de lo que sobra a w y h*/
+  left: 5px;
+  width:98%; /*para mantener en centro, ajustar con bottom y right*/
+  display:none; 
+  padding:0px; 
+  background: orangered; 
+  font-size: 1.2em;
+  text-align: left; 
+  	z-index: 1;
+
+}
+.headerSobre h2{
+  padding: 0px;
+  margin: 4px;
+  font-size: 1.2em;
+  text-align: center; 
+  letter-spacing: 0.0em;
+  color: white;
+}
+.headerSobre p{
+  color: black;
+  letter-spacing: 0.0px;
+  text-indent: 15px;
+  padding: 0px;
+margin:2px 5px 3px 5px;
+   line-height: 1.1em;
+}
+.headerSobre b {
+  padding: 0px;
+  margin: 0px;
+  color: white;
+  font-weight: normal;
+ }
+.button {
+  margin: 50px 0px 2px 5px; 
+  padding:1px;
+  background-color: black;
+  border: 0px;
+  color:#000;
+  text-decoration:none;
+  font-size: 1.0em;
+  color: orangered;
+}
+/* cierre popups del header - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+
+/* contador segundos pie pagina - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+#counterPoema {
+  position: fixed;
+  bottom: 0px;
+	left: 0px;
+	right: 0px;
+  padding:0px;  
+	background: none; 
+  font-size: 1.1em;
+  font-weight: normal;
+  text-align: center;
+  color:  black;
+  letter-spacing: -0.2px;
+}
+#counterPoema p {  
+ height:18px; 
+width: 830px;
+ margin: auto;
+background: rgba(255, 255, 255, .7); 
+  padding: 3px 0px 2px 0px;
+}
+#counterPoema b {
+  color: orangered;
+}
+
+#outputTiempo {  
+  padding: 0px 2px 0px 2px;
+  font-weight: bold;
+  color: orangered;
+}
+#nombreAdiv, #palabra1Div, #palabra2Div {
+  color:black;
+}
+#monedas {
+background: white;
+  color: black;
+  font-size: 14px;
+}
+
+
+/* M E D I A - PANTALLA IPAD 2 - - - - - - - - - - - - */
+@media screen and (max-width: 800px ) {
+}
+
+@media only screen and (max-width: 330px) {
+  body {
+    font-family: 'Open Sans Condensed', sans-serif;
+  	font-size: 6px;
+  }
+  #wrap {
+    width: 100%;
+    margin-left: 0px;
+  }
+  #poema {
+  vertical-align: middle;
+  font-size: 2.4em;
+  }
+  .headerSobre {
+	  top: 36px; /*dividir de lo que sobra a w y h*/
+  	  font-size: 1.6em;
+	  text-align: left; 
+	}
+	#counterPoema p {  
+ 		height:30px; 
+		width: 100%;
+ 		margin: auto;
+	 	padding: 1px 0px 1px 0px;
+  		font-size: 1.8em;
+    	line-height: 1.2em;
+	}
+
+} 
+

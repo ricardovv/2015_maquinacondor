@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../_imgHome/imgHome.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+	  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  text-align: left;
+}
+#container {
+background: rgba(200, 200, 200, 0.4);
+  margin-left:  auto;
+  margin-right:  10%;
+  margin-top: 12%;
+  max-width: 260px;
+  padding: 5px;
+  font-size: 1.2em;
+}
+h1 {
+  font-size: 1.4em;
+  font-weight: bold;
+  letter-spacing:0.05em;
+  margin: 5px 0px 10px 0px;
+}
+a {
+  color: #3282e6;
+  text-decoration: none;
+}
+
+
+/* M E D I A - PANTALLA IPAD 2 - - - - - - - - - - - - */
+@media screen and (max-width: 800px ) {
+	#container {
+  	padding: 2px;
+  	font-size: 1.0em;
+	}
+
+	h1 {
+  		font-size: 1.2em;
+  		font-weight: bold;
+  	}
+}
+
+
+/* M E D I A - MOVIL  - - - - - - - - - - - */
+@media screen and (max-width: 330px ) {
+
+	body {
+  		background-image: url('../_imgHome/imgHome_m.jpg');
+  		font-size: 8px;
+  	}
+	#container {
+		background: rgba(200, 200, 200, 0.6);
+		margin-left:  10%;
+		margin-right:  auto;
+  		margin-top: 10px;
+		max-width: 240px;
+  		padding: 2px;
+		font-size: 1.3em;
+	}
+	h1 {
+  		font-size: 1.4em;
+  		font-weight: bold;
+  	}
+}
